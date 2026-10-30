@@ -1,5 +1,5 @@
 import {useEffect,useRef} from 'react';
-import {ArrowLeft,ArrowUpRight,MessageCircle} from 'lucide-react';
+import {ArrowLeft,Mail,MessageCircle} from 'lucide-react';
 import {useReducedMotion} from 'motion/react';
 import {company,type Product} from '@/lib/catalog';
 import './product-detail.css';
@@ -108,7 +108,7 @@ export function ProductDetail({product,onBack}:{product:Product;onBack:()=>void}
         Enquire on WhatsApp <MessageCircle size={17} aria-hidden="true"/>
       </a>
       <a className="button product-detail-enquiry" href={`/enquiry?product=${encodeURIComponent(product.name)}`}>
-        Use the enquiry form <ArrowUpRight size={17} aria-hidden="true"/>
+        Email enquiry <Mail size={17} aria-hidden="true"/>
       </a>
     </div>
   </section>;
