@@ -5,27 +5,29 @@ import {subscribeScrollFrame} from '@/lib/scroll-frame';
 type Mode='home'|'products'|'enquiry'|'contact'|'story';
 const fragment=`
 precision highp float;
-uniform sampler2D uImage0;uniform vec2 uSize0;uniform vec2 uResolution;uniform float uProgress;uniform float uMode;varying vec2 vUv;
-vec2 cover(vec2 uv,float aspect){float b=uSize0.x/uSize0.y;vec2 scale=vec2(min(aspect/b,1.),min(b/aspect,1.));return(uv-.5)*scale+.5+vec2(0.,.28)*(1.-scale);}
-vec3 photograph(vec2 uv,float aspect){return texture2D(uImage0,clamp(cover(uv,aspect),.001,.999)).rgb;}
+uniform sampler2D uImage0;uniform sampler2D uImage1;uniform sampler2D uImage2;uniform vec2 uSize0;uniform vec2 uSize1;uniform vec2 uSize2;uniform vec2 uResolution;uniform float uProgress;uniform float uMode;varying vec2 vUv;
+vec2 cover(vec2 uv,float aspect,vec2 size){float b=size.x/size.y;vec2 scale=vec2(min(aspect/b,1.),min(b/aspect,1.));return(uv-.5)*scale+.5+vec2(0.,.28)*(1.-scale);}
+vec3 photograph0(vec2 uv,float aspect){return texture2D(uImage0,clamp(cover(uv,aspect,uSize0),.001,.999)).rgb;}
+vec3 photograph1(vec2 uv,float aspect){return texture2D(uImage1,clamp(cover(uv,aspect,uSize1),.001,.999)).rgb;}
+vec3 photograph2(vec2 uv,float aspect){return texture2D(uImage2,clamp(cover(uv,aspect,uSize2),.001,.999)).rgb;}
 void main(){
  vec2 uv=vUv;float p=uProgress;float aspect=uResolution.x/uResolution.y;vec3 colour=vec3(.12,.07,.055);
  if(uMode<.5){
   float open=smoothstep(0.,.58,p);vec2 frame=mix(vec2(aspect<.8?.76:.34,.66),vec2(1.),open);
   vec2 local=(uv-.5)/frame+.5;float inside=step(0.,local.x)*step(local.x,1.)*step(0.,local.y)*step(local.y,1.);
-  vec3 background=photograph(uv,aspect)*.18;
+  vec3 background=photograph0(uv,aspect)*.18;
   float fold=sin(local.y*5.+open*3.)*sin(open*3.14159);local.x+=fold*.018;local.y+=sin(local.x*3.)*sin(open*3.14159)*.006;
-  vec3 image=photograph(local,aspect*frame.x/frame.y)*(1.+fold*.08);colour=mix(background,image,inside);
+  vec3 image=photograph0(local,aspect*frame.x/frame.y)*(1.+fold*.08);colour=mix(background,image,inside);
  }else if(uMode<1.5){
-  vec2 local=(uv-.5)*(1.-p*.07)+.5;local.x+=sin(local.y*3.+p*5.)*.006*sin(p*3.14159);colour=photograph(local,aspect);
+  vec2 local=(uv-.5)*(1.-p*.07)+.5;local.x+=sin(local.y*3.+p*5.)*.006*sin(p*3.14159);colour=photograph0(local,aspect);
   float light=1.-smoothstep(.05,.8,abs(uv.x-(.85-p*.35)));colour*=.7+light*.3;
  }else if(uMode<2.5){
-  vec2 local=(uv-.5)*mix(.80,1.,p)+.5;local.y+=sin(local.x*10.+p*6.)*.008*sin(p*3.14159);colour=photograph(local,aspect);
+  vec2 local=(uv-.5)*mix(.80,1.,p)+.5;local.y+=sin(local.x*10.+p*6.)*.008*sin(p*3.14159);colour=photograph0(local,aspect);
  }else if(uMode<3.5){
   float diagonal=uv.x*.7+(1.-uv.y)*.3;float edge=mix(-.12,1.15,p);float reveal=1.-smoothstep(edge-.12,edge+.12,diagonal);
-  vec3 image=photograph(uv,aspect);float grey=dot(image,vec3(.299,.587,.114));vec3 shadow=mix(vec3(grey)*vec3(.32,.23,.20),image*.24,.25);colour=mix(shadow,image,reveal);
+  vec3 image=photograph0(uv,aspect);float grey=dot(image,vec3(.299,.587,.114));vec3 shadow=mix(vec3(grey)*vec3(.32,.23,.20),image*.24,.25);colour=mix(shadow,image,reveal);
   colour+=vec3(.1,.065,.02)*exp(-pow((diagonal-edge)*18.,2.));
- }else{vec2 local=(uv-.5)*mix(.87,1.,p)+.5;local.y+=p*.025;colour=photograph(local,aspect);}
+ }else{vec2 local=(uv-.5)*mix(.87,1.,p)+.5;local.y+=p*.025;colour=photograph0(local,aspect);}
  float vignette=1.-smoothstep(.25,.9,distance(vUv,vec2(.5)))*.14;gl_FragColor=vec4(colour*vignette,1.);
  #include <tonemapping_fragment>
  #include <colorspace_fragment>

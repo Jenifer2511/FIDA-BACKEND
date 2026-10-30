@@ -43,6 +43,7 @@ import { PageTransitions } from './PageTransitions';
 import { SmoothScroll } from './SmoothScroll';
 import { CultureChapter, FashionBackdrop } from './CultureChapter';
 import { ProductReveal } from './ProductReveal';
+import { ProductDetail } from './ProductDetail';
 import { LandingManifesto } from './LandingCinema';
 
 type Page = 'home' | 'products' | 'enquiry' | 'contact' | 'story';
@@ -394,16 +395,25 @@ function useProducts() {
 function ProductCard({
   product,
   index = 0,
+  onSelect,
 }: {
   product: Product;
   index?: number;
+  onSelect?: (product: Product) => void;
 }) {
-  const enquiryHref =
-    `/enquiry?product=${encodeURIComponent(product.name)}`;
+  const detailHref = `/products?product=${encodeURIComponent(product.id)}`;
 
   return (
     <ProductReveal index={index} className="product-card">
-      <a href={enquiryHref} className="product-image">
+      <a
+        href={detailHref}
+        className="product-image"
+        onClick={event => {
+          if (!onSelect) return;
+          event.preventDefault();
+          onSelect(product);
+        }}
+      >
         <img
           src={product.image}
           alt={product.name}
@@ -415,7 +425,7 @@ function ProductCard({
         </span>
 
         <span className="product-action">
-          Enquire about this piece
+          View this piece
           <ArrowUpRight size={18} aria-hidden="true" />
         </span>
       </a>
@@ -425,13 +435,6 @@ function ProductCard({
           <p className="eyebrow">{product.category}</p>
           <h3>{product.name}</h3>
         </div>
-
-        <a
-          href={enquiryHref}
-          aria-label={`Enquire about ${product.name}`}
-        >
-          <ArrowUpRight size={20} aria-hidden="true" />
-        </a>
       </div>
 
       <p className="product-price">
@@ -629,6 +632,19 @@ function Home() {
 
 function Products() {
   const { products, error, loading } = useProducts();
+  const [selectedProduct, setSelectedProduct] = useState(() => {
+    const requestedId = new URLSearchParams(window.location.search).get('product');
+    return products.find(product => product.id === requestedId) || null;
+  });
+
+  useEffect(() => {
+    const syncProductFromUrl = () => {
+      const requestedId = new URLSearchParams(window.location.search).get('product');
+      setSelectedProduct(products.find(product => product.id === requestedId) || null);
+    };
+    window.addEventListener('popstate', syncProductFromUrl);
+    return () => window.removeEventListener('popstate', syncProductFromUrl);
+  }, [products]);
 
   const normalise = (category: string) => category.trim().toLowerCase();
   const categories = FIDA_CATEGORIES;
@@ -661,10 +677,29 @@ function Products() {
     return (
       <div className="product-grid">
         {items.map((product, index) => (
-          <ProductCard product={product} key={product.id} index={index} />
+          <ProductCard
+            product={product}
+            key={product.id}
+            index={index}
+            onSelect={selectProduct}
+          />
         ))}
       </div>
     );
+  }
+
+  function selectProduct(product: Product) {
+    setSelectedProduct(product);
+    const url = new URL(window.location.href);
+    url.searchParams.set('product', product.id);
+    window.history.pushState(null, '', `${url.pathname}${url.search}${url.hash}`);
+  }
+
+  function closeProduct() {
+    setSelectedProduct(null);
+    const url = new URL(window.location.href);
+    url.searchParams.delete('product');
+    window.history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`);
   }
 
   function selectCategory(category: string) {
@@ -678,6 +713,17 @@ function Products() {
   function resetFilters() {
     setSearch('');
     selectCategory('All pieces');
+  }
+
+  if (selectedProduct) {
+    return (
+      <>
+        <CultureChapter kind="products" />
+        <section className="section full-collection" id="collection">
+          <ProductDetail product={selectedProduct} onBack={closeProduct} />
+        </section>
+      </>
+    );
   }
 
   return (
@@ -834,7 +880,17 @@ function Enquiry() {
 
   function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-
+    const fields = new FormData(event.currentTarget);
+    const body = [
+      `Name: ${fields.get('name')}`,
+      `Email: ${fields.get('email')}`,
+      `Phone / WhatsApp: ${fields.get('phone')}`,
+      `Interested in: ${interest}`,
+      '',
+      String(fields.get('message') || ''),
+    ].join('\n');
+    const subject = `FIDA enquiry: ${interest}`;
+    window.location.href = `mailto:${company.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }
 
   const defaultInterests = [
@@ -941,7 +997,7 @@ function Enquiry() {
               className="enquiry-form"
             >
               <p className="notice">
-                UI preview only. Enquiry submissions are disabled.
+                Submitting opens an email to {company.email} with your enquiry details.
               </p>
 
               <div className="form-row">
@@ -1055,10 +1111,6 @@ function Enquiry() {
                 <ArrowUpRight size={18} aria-hidden="true" />
               </button>
 
-              <p className="form-privacy">
-                This preview does not submit or store the details
-                entered in this form.
-              </p>
             </form>
           )}
 

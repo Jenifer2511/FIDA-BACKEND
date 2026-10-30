@@ -30,8 +30,8 @@ export function ProductReveal({children,index=0,className=''}:{children:ReactNod
       element.style.setProperty('--piece-edge-left',`${reveal*100-hem*.28}%`);
       element.style.setProperty('--piece-edge-mid',`${reveal*100+hem*.48}%`);
       element.style.setProperty('--piece-edge-right',`${reveal*100-hem}%`);
-      element.style.setProperty('--piece-image-y',`${(1-reveal)*5.5}%`);
-      element.style.setProperty('--piece-image-scale',`${1.075-reveal*.075}`);
+      element.style.setProperty('--piece-image-y',`${(1-reveal)*1}%`);
+      element.style.setProperty('--piece-image-scale',`${1.015-reveal*.015}`);
       element.style.setProperty('--piece-veil',`${(1-reveal)*.46}`);
       element.style.setProperty('--piece-caption-y',`${(1-caption)*20}px`);
       element.style.setProperty('--piece-caption-opacity',`${caption}`);

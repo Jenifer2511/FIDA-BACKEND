@@ -13,8 +13,10 @@ h1,h2,h3{font-optical-sizing:auto;font-weight:400;letter-spacing:-.035em}h2{line
 .site .desktop-nav a::after{background:#fbfaf8;bottom:6px}
 .site .header-cta{font-size:9px;font-weight:400;letter-spacing:.1em;border:0;padding:0;gap:24px}
 .page-home .header-cta{color:#e8dcc7}.site .menu-toggle{color:#302621}
-.site .footer{background:#231b19;color:#eee5d4;border-top:1px solid #bba88050}.site .footer .footer-logo {
-  color: #ffbf00ec;
+.site .footer{background:#231b19;color:#eee5d4;border-top:1px solid #bba88050}.site .footer .footer-logo,
+.site .footer .footer-logo span {
+  color: #ffdf00;
+  text-shadow: 0 0 5px #ffdf00, 0 0 14px #ffdf00cc, 0 0 32px #ffdf0099;
 }
 .site .footer-invite{font-size:clamp(45px,6.4vw,100px);line-height:1.2;letter-spacing:-.04em}
 .site .footer-top,.site .footer-bottom{border-color:#c4b08b2b}.site .footer-invite em{color:#c4b08b}

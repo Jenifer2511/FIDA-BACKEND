@@ -1,11 +1,17 @@
-/* Keep the supplied products uncropped and their original colours intact. */
-.site .product-card .product-image { background: #eee7db; }
+.site .product-card .product-image {
+  aspect-ratio: 2 / 3;
+  background: linear-gradient(145deg, #e6ddcf, #d9cbb7);
+  border: 1px solid #b39b7445;
+  box-shadow: 0 12px 35px #46351b12;
+}
 .site .product-card .product-image > img {
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
+  padding: 0;
   filter: none;
 }
 .site .product-card .product-caption h3 { overflow-wrap: anywhere; }
+.site .product-card .product-price { color: #796b56; }
 .site .look-card > img { object-fit: contain; object-position: center; }
 
 /* The six supplied categories remain visible even before products are listed. */
