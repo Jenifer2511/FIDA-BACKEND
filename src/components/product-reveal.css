@@ -3,6 +3,8 @@
 .product-reveal .product-image{background:#ad9779;isolation:isolate}
 .product-reveal[data-reveal-ready=true] .product-image{clip-path:polygon(0 0,100% 0,100% var(--piece-edge-right),75% var(--piece-edge-mid),40% var(--piece-edge-mid),0 var(--piece-edge-left));will-change:clip-path}
 .product-reveal[data-reveal-ready=true] .product-image>img{transform:translate3d(0,var(--piece-image-y),0) scale(var(--piece-image-scale));transform-origin:50% 55%;transition:none;will-change:transform;filter:saturate(.94)}
+.product-reveal .product-image>img{transition:transform .65s cubic-bezier(.2,.7,.2,1)}
+@media(hover:hover){.product-reveal .product-image:hover>img{transform:scale(1.025)}}
 .product-reveal .product-image::before{content:'';position:absolute;z-index:1;inset:0;pointer-events:none;opacity:var(--piece-veil);background:linear-gradient(115deg,#2e1b1000 24%,#e4c8a15c 49%,#26160d80 100%);mix-blend-mode:multiply}
 .product-reveal .product-number{z-index:2;font-size:10px;font-weight:750;letter-spacing:.12em;color:#fff7dc;text-shadow:0 1px 8px #24150980}
 .product-reveal .product-action{z-index:3;font-weight:700;letter-spacing:.035em;color:#332015;background:#fff3dceF}
