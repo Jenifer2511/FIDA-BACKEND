@@ -1,7 +1,7 @@
-/* Keep the supplied products uncropped and their original colours intact. */
+/* Keep product photos consistently framed within their card boxes. */
 .site .product-card .product-image { background: #eee7db; }
 .site .product-card .product-image > img {
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   filter: none;
 }
