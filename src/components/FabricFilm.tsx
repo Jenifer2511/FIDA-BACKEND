@@ -19,22 +19,8 @@ void main(){
   float fold=sin(local.y*5.+open*3.)*sin(open*3.14159);local.x+=fold*.018;local.y+=sin(local.x*3.)*sin(open*3.14159)*.006;
   vec3 image=photograph0(local,aspect*frame.x/frame.y)*(1.+fold*.08);colour=mix(background,image,inside);
  }else if(uMode<1.5){
-  float frameWidth=aspect<.75?.56:.34;float frameHeight=aspect<.75?.46:.70;vec2 centre=aspect<.75?vec2(.60,.63):vec2(.72,.50);
-  vec2 local=(uv-centre)/vec2(frameWidth,frameHeight)+.5;float inside=step(0.,local.x)*step(local.x,1.)*step(0.,local.y)*step(local.y,1.);
-  float imageAspect=aspect*frameWidth/frameHeight;
-  vec2 imageRatio=vec2(uSize0.x/uSize0.y,uSize0.x/uSize0.y);
-  vec2 fit=min(vec2(1.),vec2(imageRatio.x/imageAspect,imageAspect/imageRatio.y));
-  vec2 fitted=(local-.5)*fit+.5;
-  float imageInside=step(0.,fitted.x)*step(fitted.x,1.)*step(0.,fitted.y)*step(fitted.y,1.);
-  float position=p*2.;float blend=smoothstep(.34,.66,fract(position));
-  vec2 sampleUv=clamp(fitted,.001,.999);
-  vec3 first=mix(texture2D(uImage0,sampleUv).rgb,texture2D(uImage1,sampleUv).rgb,blend);
-  vec3 second=mix(texture2D(uImage1,sampleUv).rgb,texture2D(uImage2,sampleUv).rgb,blend);
-  vec3 garment=position<1.?first:second;
-  vec2 edge=min(local,1.-local);float rim=inside*(1.-smoothstep(.004,.012,min(edge.x,edge.y)));
-  vec3 paper=vec3(.87,.82,.73);vec3 panel=mix(paper,garment,imageInside);panel=mix(panel,vec3(.70,.57,.36),rim*.72);
-  float glow=exp(-distance(uv,centre)*3.)*.13;colour=vec3(.12,.075,.055)+vec3(.18,.12,.07)*glow;colour=mix(colour,panel,inside);
-  float shimmer=sin(local.x*8.+p*6.)*.004*sin(p*6.283);colour+=vec3(shimmer)*inside;
+  vec2 local=(uv-.5)*(1.-p*.07)+.5;local.x+=sin(local.y*3.+p*5.)*.006*sin(p*3.14159);colour=photograph0(local,aspect);
+  float light=1.-smoothstep(.05,.8,abs(uv.x-(.85-p*.35)));colour*=.7+light*.3;
  }else if(uMode<2.5){
   vec2 local=(uv-.5)*mix(.80,1.,p)+.5;local.y+=sin(local.x*10.+p*6.)*.008*sin(p*3.14159);colour=photograph0(local,aspect);
  }else if(uMode<3.5){
