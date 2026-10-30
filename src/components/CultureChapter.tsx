@@ -21,6 +21,7 @@ export const pageThemes={
 export const responsivePhoto=(src:string)=>src.includes('/distinct/lehenga-')?{srcSet:src.replace('-4k.jpg','-mobile.webp')+' 1024w',sizes:'100vw'}:src.endsWith('-4k.jpg')?{srcSet:src.replace('-4k.jpg','-mobile.webp')+' 1600w, '+src+' '+(src.includes('/distinct/kaftan-')?2908:3840)+'w',sizes:'(max-width: 760px) 100vw, 3840px'}:{};
 export function FashionBackdrop({page}:{page:SceneKind}){if(page==='home')return null;const t=pageThemes[page];return <div className={'page-scenery scenery-'+page} aria-hidden="true"><img src={t.image} {...responsivePhoto(t.image)} alt=""/><div/></div>}
 const looks = initialProducts.filter(p => p.featured).slice(0, 3).map((p, i) => ({image:p.image,name:p.name,tag:String(i+1).padStart(2,'0')+' / '+p.category.toUpperCase()}));
+const productLookImages=looks.map(look=>look.image);
 function ExistingCultureChapter({kind}:{kind:SceneKind}) {
  const root=useRef<HTMLElement>(null),stage=useRef<HTMLDivElement>(null),reduce=useReducedMotion();const theme=pageThemes[kind];
  useEffect(()=>{
@@ -29,7 +30,7 @@ function ExistingCultureChapter({kind}:{kind:SceneKind}) {
   Promise.all([import('gsap'),import('gsap/ScrollTrigger')]).then(([{gsap},{ScrollTrigger}])=>{
    if(disposed)return;gsap.registerPlugin(ScrollTrigger);
    const context=gsap.context(()=>{
-    const tl=gsap.timeline({defaults:{ease:'none'},scrollTrigger:{trigger:element,start:'top top',end:()=>'+='+Math.max(1,element.offsetHeight-screen.offsetHeight),scrub:true,invalidateOnRefresh:true,onUpdate:self=>{element.dataset.progress=self.progress.toFixed(5);element.dataset.renderProgress=self.progress.toFixed(5);const bar=element.querySelector<HTMLElement>('.scene-progress>i');if(bar)bar.style.transform='scaleX('+self.progress+')';}}});
+    const tl=gsap.timeline({defaults:{ease:'none'},scrollTrigger:{trigger:element,start:'top top',end:()=>'+='+Math.max(1,element.offsetHeight-screen.offsetHeight),scrub:true,invalidateOnRefresh:true,onUpdate:self=>{element.dataset.progress=self.progress.toFixed(5);element.dataset.renderProgress=self.progress.toFixed(5);const bar=element.querySelector<HTMLElement>('.scene-progress>i');if(bar)bar.style.transform='scaleX('+self.progress+')';if(kind==='products'){const lookIndex=self.progress<.25?0:self.progress<.75?1:2;const label=element.querySelector<HTMLElement>('.scene-look-label');if(label){const count=label.querySelector('span');const name=label.querySelector('p');if(count)count.textContent=looks[lookIndex].tag;if(name)name.textContent=looks[lookIndex].name;}}}}});
     // An explicit one-unit clock makes every movement reversible and scroll-owned.
     const clock={value:0};tl.to(clock,{value:1,duration:1},0);
     if(kind==='home'){
@@ -38,8 +39,6 @@ function ExistingCultureChapter({kind}:{kind:SceneKind}) {
      tl.to('.scene-copy',{yPercent:-18,opacity:0,duration:.22},.78);
      tl.fromTo('.scene-frame-line',{scaleX:()=>screen.clientWidth<760?.76:.34,scaleY:.66,opacity:.7},{scaleX:1,scaleY:1,opacity:0,duration:.5},0);
     }else if(kind==='products'){
-     const cards=gsap.utils.toArray<HTMLElement>('.look-card');
-     cards.forEach((card,i)=>{const start=i*.245;tl.fromTo(card,{yPercent:125,rotation:9-i*3,rotateY:-12,scale:.86,opacity:0},{yPercent:0,rotation:0,rotateY:0,scale:1,opacity:1,duration:.23},start);if(i<cards.length-1)tl.to(card,{yPercent:-15,rotation:-5,scale:.88,opacity:0,duration:.20},start+.25)});
      tl.to('.scene-copy',{xPercent:-8,yPercent:-5,duration:1},0);
     }else if(kind==='enquiry'){
      gsap.utils.toArray<HTMLElement>('.weave-strip').forEach((strip,i)=>{tl.to(strip,{yPercent:i%2===0?-115:115,duration:.5},i*.045)});
@@ -66,14 +65,14 @@ function ExistingCultureChapter({kind}:{kind:SceneKind}) {
  },[kind,reduce]);
  return <section className={'page-scene scene-'+kind+(reduce?' scene-reduced':'')} ref={root} data-theme={kind} data-choreography={{home:'webgl-expanding-portrait',products:'scroll-stacked-lookbook',enquiry:'woven-strip-reveal',contact:'diagonal-light-reveal',story:'drawn-thread-and-maker-spiral'}[kind]} aria-label={theme.name}>
   <div className="page-scene-stage" ref={stage}>
-   <img className="scene-fallback-photo" src={theme.image} {...responsivePhoto(theme.image)} alt={theme.alt} fetchPriority="high"/>
-   <FabricFilm images={[theme.image]} mode={kind} sectionRef={root}/><div className="scene-shade"/>
+   <img className="scene-fallback-photo" src={kind==='products'?productLookImages[0]:theme.image} {...responsivePhoto(kind==='products'?productLookImages[0]:theme.image)} alt={kind==='products'?looks[0].name:theme.alt} fetchPriority="high"/>
+   <FabricFilm images={kind==='products'?productLookImages:[theme.image]} mode={kind} sectionRef={root}/><div className="scene-shade"/>
    {kind==='home'&&<><div className="scene-frame-line" aria-hidden="true"/><span className="scene-house-word" aria-hidden="true">FIDA</span></>}
    {kind==='enquiry'&&<><div className="weave-curtain" aria-hidden="true">{Array.from({length:7},(_,i)=><i className="weave-strip" key={i}/>)}</div><svg className="scene-thread" viewBox="0 0 1200 700" preserveAspectRatio="none" aria-hidden="true"><path className="scene-thread-path" pathLength="1" strokeDasharray="1" strokeDashoffset="1" d="M-20 580C200 280 250 660 520 420S950 180 1220 80"/></svg></>}
    {kind==='contact'&&<><div className="contact-diagonal" aria-hidden="true"/><div className="contact-hello" aria-hidden="true">{'HELLO'.split('').map((letter,i)=><span className="contact-letter" key={i}>{letter}</span>)}</div><div className="contact-countries"><span className="contact-country">01 / INDIA</span><span className="contact-country">02 / SRI LANKA</span><span className="contact-country">03 / UAE</span></div></>}
    {kind==='story'&&<><svg className="story-thread" viewBox="0 0 1200 700" preserveAspectRatio="none" aria-hidden="true"><path className="story-thread-path" pathLength="1" strokeDasharray="1" strokeDashoffset="1" d="M0 630C180 630 150 170 390 220S550 650 760 400 1000 140 1200 180"/></svg><figure className="craft-detail"><img src="/assets/culture/tailor-portrait-mobile.webp" alt="A traditional tailor carefully working at his sewing machine"/><figcaption>THE PERSON BEHIND EVERY PIECE</figcaption></figure></>}
    <div className="scene-copy"><p className="scene-eyebrow">{theme.name}</p><h1>{kind==='enquiry'?<><span className="scene-word-mask"><span className="scene-word">Every detail.</span></span><span className="scene-word-mask"><em className="scene-word">Your story.</em></span></>:kind==='story'?<><span className="scene-word-mask"><span className="craft-word">Made by hand.</span></span><span className="scene-word-mask"><em className="craft-word">Held by heart.</em></span></>:theme.title}</h1><p className="scene-description">{theme.description}</p></div>
-   {kind==='products'&&<div className="look-stack" aria-label="Scroll-revealed fashion lookbook">{looks.map(look=><article className="look-card" key={look.image}><img src={look.image} alt={look.name}/><div><p>{look.tag}</p><h2>{look.name}</h2></div></article>)}</div>}
+   {kind==='products'&&<div className="scene-look-label" aria-hidden="true"><span>{looks[0].tag}</span><p>{looks[0].name}</p></div>}
    <div className="scene-bottom"><span><ArrowDown size={15}/>{theme.cue}</span><span className="scene-progress"><i/></span><a href={theme.link}>{theme.action}<ArrowUpRight size={16}/></a></div>
   </div>
  </section>;
