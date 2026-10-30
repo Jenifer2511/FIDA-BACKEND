@@ -425,13 +425,6 @@ function ProductCard({
           <p className="eyebrow">{product.category}</p>
           <h3>{product.name}</h3>
         </div>
-
-        <a
-          href={enquiryHref}
-          aria-label={`Enquire about ${product.name}`}
-        >
-          <ArrowUpRight size={20} aria-hidden="true" />
-        </a>
       </div>
 
       <p className="product-price">
