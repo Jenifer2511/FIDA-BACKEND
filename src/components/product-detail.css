@@ -1,0 +1,25 @@
+.site .product-image-button{width:100%;padding:0;border:0;text-align:left;cursor:pointer}
+.site .product-image-button:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.product-detail{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(300px,.88fr);gap:clamp(34px,7vw,110px);align-items:center;max-width:1320px;margin:0 auto;padding:28px 0 36px;scroll-margin-top:28px}
+.product-detail-visual{min-width:0;overflow:hidden;background:#e7dfd2;animation:product-detail-arrive .7s cubic-bezier(.2,.75,.25,1) both}
+.product-detail-image{position:relative;aspect-ratio:.82;overflow:hidden;background:#eee7db}
+.product-detail-image>img,.product-detail-image>canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.product-detail-image>img{padding:4%;}
+.product-detail-image>canvas{z-index:1;display:block}
+.product-detail-image-number{position:absolute;z-index:2;left:20px;bottom:18px;padding:8px 11px;background:#f6f1e9d9;color:var(--ink);font-size:9px;letter-spacing:.12em}
+.product-detail-copy{max-width:520px;padding:38px 0;animation:product-detail-copy-arrive .65s .12s both}
+.product-detail-back{display:inline-flex;align-items:center;gap:10px;margin:0 0 clamp(45px,8vw,105px);padding:10px 0;color:var(--muted);font-size:11px;letter-spacing:.06em}
+.product-detail-back:hover{color:var(--ink)}
+.product-detail-copy>.eyebrow{margin-bottom:18px;color:var(--gold)}
+.product-detail-copy h2{max-width:560px;font-size:clamp(42px,5.5vw,78px);line-height:1.03}
+.product-detail-rule{display:block;width:54px;height:1px;margin:28px 0;background:var(--gold)}
+.product-detail-description{max-width:440px;color:var(--muted);font-size:13px;line-height:1.9}
+.product-detail-availability{margin-top:22px;color:var(--ink);font-size:11px}
+.product-detail-whatsapp{display:inline-flex;align-items:center;justify-content:space-between;gap:18px;min-width:245px;margin-top:35px;background:#315b43;border-color:#315b43;color:#fff}
+.product-detail-whatsapp:hover{background:#254936;border-color:#254936}
+.product-detail-enquiry{display:inline-flex;align-items:center;gap:18px;margin-top:12px}
+.product-detail-copy>.button{width:max-content;max-width:100%}
+@keyframes product-detail-arrive{from{opacity:.65;transform:translateX(-18px) scale(.985)}to{opacity:1;transform:translateX(0) scale(1)}}
+@keyframes product-detail-copy-arrive{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:760px){.product-detail{grid-template-columns:1fr;gap:15px;padding-top:18px}.product-detail-image{aspect-ratio:.92}.product-detail-copy{padding:20px 0 35px}.product-detail-back{margin-bottom:45px}.product-detail-copy h2{font-size:clamp(38px,11vw,58px)}.product-detail-description{font-size:12px}.product-detail-copy>.button{width:100%}.product-detail-whatsapp,.product-detail-enquiry{justify-content:space-between}}
+@media(prefers-reduced-motion:reduce){.product-detail-visual,.product-detail-copy{animation:none}}

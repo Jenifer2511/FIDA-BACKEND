@@ -1,0 +1,57 @@
+FIDA PHOTO UPLOAD FIX — APPLY TO YOUR EXISTING SITES
+
+1. Update your database first.
+Open Neon Console > SQL Editor. Select the SAME database/branch used by the
+customer/backend Vercel project's DATABASE_URL. Run these two statements:
+
+ALTER TABLE products ADD COLUMN IF NOT EXISTS image_data BYTEA;
+ALTER TABLE products ADD COLUMN IF NOT EXISTS image_mime_type TEXT;
+
+This keeps existing products, archived items and external image URLs intact.
+The same SQL is in db/migrations/001-product-images.sql in the backend archive.
+Do not drop the table. Do not run the seed schema for this existing database.
+
+2. Update the CUSTOMER / BACKEND repository and redeploy its existing Vercel project.
+Use FIDA-BACKEND-UPDATE.zip. Copy the CONTENTS of its project folder to the
+existing repository root. Keep api/, server/, db/, src/, public/, package.json,
+package-lock.json and vercel.json together at that root.
+Keep your existing server environment variables, including DATABASE_URL.
+ADMIN_ORIGIN must include https://fidaadminsite.vercel.app (the admin in your screenshot).
+Optional PUBLIC_API_BASE_URL: your actual customer/backend production origin,
+without a trailing path. Do not set this to the admin frontend or to an example placeholder.
+Redeploy after environment changes.
+
+3. Update the ADMIN repository and redeploy its existing Vercel project.
+Use FIDA-ADMIN-main.zip. Copy the CONTENTS of its single project folder to the
+existing repository root. Do not put it inside another FIDA-ADMIN-main folder.
+Remove the obsolete nested FIDA-ADMIN-main folder from your repository if present;
+the updated archive has one root project and no nested duplicate.
+Keep VITE_API_BASE_URL pointing to the customer/backend production origin.
+Keep VITE_STOREFRONT_URL pointing to the customer website.
+Do not put the database password into a VITE_ environment variable.
+
+4. After both deployments finish, hard refresh the admin (Ctrl+Shift+R), sign in,
+choose Add product, choose a photo from your computer, and save it.
+JPG/PNG/WebP: up to 10 MiB source; files above 2 MiB are optimized to fit.
+GIF/AVIF: up to 2 MiB. HEIC and SVG: export as JPG first.
+Publish the product so customers can see it in the collection.
+Reopen the product and confirm its photo, then test replacing the photo.
+
+TROUBLESHOOTING
+Old Cloudinary error: old admin build or wrong Vercel root directory. Confirm
+the production build uses the updated root src/AdminSite.tsx, then hard refresh.
+The new upload flow does not call /api/admin/upload-signature.
+Missing image column: run step 1 on the database/branch used by the deployed backend.
+Cross-origin failure: check ADMIN_ORIGIN on the backend and VITE_API_BASE_URL
+on the admin, and redeploy after changing those values.
+
+VERIFICATION
+Both frontend production builds and TypeScript checks passed.
+28 database/API integration checks passed with PostgreSQL (PGlite), covering
+BYTEA storage/retrieval, product edits, image replacement, URL switching,
+archive/restore, invalid formats, size limits, admin auth and CORS.
+The production database and live deployments have not been changed or tested.
+Browser QA was blocked by the preview host configuration. Browser image resizing
+and live deployment behavior still need verification after redeployment.
+
+No Cloudinary account or credentials are required for the updated upload flow.
