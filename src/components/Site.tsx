@@ -1356,8 +1356,7 @@ function Story() {
         </Reveal>
 
         <p>
-          Inspired by the artistry of our heritage and the spirit of modern expression, we create clothing that transcends seasons and trends. Every fabric, silhouette, and detail is thoughtfully chosen to honour timeless techniques while embracing a fresh perspective.
-           The result is fashion that feels personal, purposeful, and effortlessly enduring.
+          Inspired by the artistry of our heritage and the spirit of modern expression, we create clothing that transcends seasons and trends. Every fabric, cut, and detail is thoughtfully chosen to honour timeless techniques while embracing a fresh perspective. The result is fashion that feels personal, purposeful, and effortlessly enduring.
         </p>
       </section>
 
