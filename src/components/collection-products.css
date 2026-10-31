@@ -14,7 +14,7 @@
 .site .product-card .product-price { color: #796b56; }
 .site .look-card > img { object-fit: contain; object-position: center; }
 
-/* The six supplied categories remain visible even before products are listed. */
+/* Collection filters stay usable before products load and at narrow widths. */
 .site .home-category-links,
 .site .full-collection .collection-category-filters {
   display: flex;
@@ -66,6 +66,36 @@
   gap: 24px;
 }
 .site .full-collection .collection-category-filters { flex: 1 1 600px; }
+.site .women-category-dropdown { position: relative; }
+.site .women-category-dropdown > .women-category-toggle { gap: 12px; }
+.site .women-category-dropdown > .women-category-toggle[data-active="true"] {
+  background: #b28b5214;
+  border-color: var(--gold);
+}
+.site .women-category-options {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 8px);
+  left: 0;
+  display: grid;
+  gap: 2px;
+  width: max-content;
+  min-width: 230px;
+  max-width: min(320px, 84vw);
+  max-height: min(60vh, 420px);
+  overflow: auto;
+  padding: 8px;
+  border: 1px solid var(--line);
+  background: var(--paper-light);
+  box-shadow: 0 12px 30px #302c2530;
+}
+.site .women-category-options[hidden] { display: none; }
+.site .full-collection .women-category-options button {
+  justify-content: flex-start;
+  width: 100%;
+  padding: 10px 12px;
+  text-align: left;
+}
 .site .full-collection .search-field {
   flex: 0 1 240px;
   min-width: 0;

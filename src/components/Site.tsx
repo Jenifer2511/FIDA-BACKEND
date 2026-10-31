@@ -20,6 +20,7 @@ import {
 import {
   ArrowUpRight,
   ArrowRight,
+  ChevronDown,
   Menu,
   X,
   Search,
@@ -629,6 +630,7 @@ function Products() {
 
   const normalise = (category: string) => category.trim().toLowerCase();
   const categories = FIDA_CATEGORIES;
+  const womenWearCategories = categories.filter(category => category !== 'Accessories');
 
   const [filter, setFilter] = useState(() => {
     if (typeof window === 'undefined') return 'All pieces';
@@ -637,6 +639,11 @@ function Products() {
       || 'All pieces';
   });
   const [search, setSearch] = useState('');
+  const [womenCategoriesOpen, setWomenCategoriesOpen] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    const requested = new URLSearchParams(window.location.search).get('category');
+    return Boolean(requested && normalise(requested) !== 'accessories');
+  });
 
   const categoryProducts = products.filter(product =>
     filter === 'All pieces'
@@ -691,6 +698,11 @@ function Products() {
     window.history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`);
   }
 
+  function selectWomenCategory(category: string) {
+    selectCategory(category);
+    setWomenCategoriesOpen(false);
+  }
+
   function resetFilters() {
     setSearch('');
     selectCategory('All pieces');
@@ -721,16 +733,58 @@ function Products() {
             role="group"
             aria-label="Filter collection"
           >
-            {categories.map(category => (
+            <div className="women-category-dropdown">
               <button
                 type="button"
-                aria-pressed={filter === category}
-                onClick={() => selectCategory(category)}
-                key={category}
+                className="women-category-toggle"
+                data-active={filter !== 'All pieces' && filter !== 'Accessories'}
+                aria-expanded={womenCategoriesOpen}
+                aria-controls="women-category-options"
+                onClick={() => setWomenCategoriesOpen(open => !open)}
               >
-                {category}
+                <span>
+                  {filter !== 'All pieces' && filter !== 'Accessories'
+                    ? `Women’s wear · ${filter}`
+                    : 'Women’s wear'}
+                </span>
+                <ChevronDown size={16} aria-hidden="true" />
               </button>
-            ))}
+              <div
+                className="women-category-options"
+                id="women-category-options"
+                role="group"
+                aria-label="Women’s wear categories"
+                hidden={!womenCategoriesOpen}
+              >
+                  <button
+                    type="button"
+                    aria-pressed={filter === 'All pieces'}
+                    onClick={() => selectWomenCategory('All pieces')}
+                  >
+                    All pieces
+                  </button>
+                  {womenWearCategories.map(category => (
+                    <button
+                      type="button"
+                      aria-pressed={filter === category}
+                      onClick={() => selectWomenCategory(category)}
+                      key={category}
+                    >
+                      {category}
+                    </button>
+                  ))}
+              </div>
+            </div>
+            <button
+              type="button"
+              aria-pressed={filter === 'Accessories'}
+              onClick={() => {
+                setWomenCategoriesOpen(false);
+                selectCategory('Accessories');
+              }}
+            >
+              Accessories
+            </button>
           </div>
 
           <label className="search-field">
