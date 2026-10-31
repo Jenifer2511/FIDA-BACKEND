@@ -770,7 +770,9 @@ function Products() {
             aria-label={`${visible.length} pieces in ${filter}`}>
             {loading
               ? 'REFRESHING COLLECTION'
-              : `${visible.length} PIECES`}
+              : filter === 'Accessories'
+                ? 'Bags'
+                : `${visible.length} PIECES`}
           </span>
 
           <span>CHOSEN FOR YOU, BY FIDA</span>
