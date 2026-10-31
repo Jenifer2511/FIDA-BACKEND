@@ -84,7 +84,7 @@ export const initialProducts: Product[] = [
   {
     "id": "fida-caramel-structured-handbag",
     "name": "Caramel Structured Handbag",
-    "category": "The Bag Edit",
+    "category": "Accessories",
     "description": "A polished caramel handbag with a structured silhouette and a long shoulder strap. Enquire with FIDA about colours, pricing and availability.",
     "image": "/assets/products/structured-caramel-handbag.webp",
     "price": "",
@@ -94,7 +94,7 @@ export const initialProducts: Product[] = [
   {
     "id": "fida-natural-woven-tote",
     "name": "Natural Woven Tote",
-    "category": "The Bag Edit",
+    "category": "Accessories",
     "description": "A relaxed woven tote finished with leather-look handles, designed for effortless daytime styling. Enquire with FIDA about colours, pricing and availability.",
     "image": "/assets/products/natural-woven-tote.webp",
     "price": "",
@@ -104,7 +104,7 @@ export const initialProducts: Product[] = [
   {
     "id": "fida-jeweled-evening-clutch",
     "name": "Jeweled Evening Clutch",
-    "category": "The Bag Edit",
+    "category": "Accessories",
     "description": "A beaded evening clutch with luminous embellishment and a chain strap for special occasions. Enquire with FIDA about pricing and availability.",
     "image": "/assets/products/jeweled-evening-clutch.webp",
     "price": "",
