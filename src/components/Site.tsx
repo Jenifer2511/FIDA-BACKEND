@@ -464,12 +464,6 @@ function Home() {
       href: '/enquiry',
     },
     {
-      name: 'Morocco',
-      subtitle: 'Colour & connection',
-      image: '/assets/distinct/kaftan-mobile.webp',
-      href: '/contact',
-    },
-    {
       name: 'The makers',
       subtitle: 'Devoted to the craft',
       image: '/assets/culture/tailor-atelier-mobile.webp',
@@ -1175,7 +1169,7 @@ function Contact() {
       >
         <div className="contact-content">
           <p className="eyebrow">
-            MOROCCO — THE WARMTH OF CONNECTION
+            INDIA — A WARM WELCOME
           </p>
 
           <h2 className="contact-content-title">

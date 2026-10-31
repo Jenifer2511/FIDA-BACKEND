@@ -141,7 +141,6 @@
   "chapters": {
     "france": "/assets/france.jpg",
     "japan": "/assets/japan-fashion.jpg",
-    "morocco": "/assets/morocco.jpg",
     "italy": "/assets/italy.jpg"
   },
   "sources": [
@@ -1584,22 +1583,6 @@
       ]
     },
     {
-      "id": "30457747",
-      "theme": "Moroccan kaftan",
-      "local": "/assets/distinct/kaftan-4k.jpg",
-      "mobile": "/assets/distinct/kaftan-mobile.webp",
-      "width": 2908,
-      "height": 4365,
-      "sourceWidth": 2908,
-      "sourceHeight": 4365,
-      "upscaled": false,
-      "source": "https://www.pexels.com/photo/30457747/",
-      "license": "https://www.pexels.com/license/",
-      "roles": [
-        "contact"
-      ]
-    },
-    {
       "id": "7202800",
       "theme": "Contemporary womenswear tailoring",
       "local": "/assets/distinct/tailoring-4k.jpg",
@@ -1647,8 +1630,8 @@
       "image": "/assets/distinct/embroidery-4k.jpg"
     },
     "contact": {
-      "theme": "Moroccan kaftan",
-      "image": "/assets/distinct/kaftan-4k.jpg"
+      "theme": "Indian saree weaving",
+      "image": "/assets/culture/saree-weaving-detail-4k.jpg"
     },
     "story": {
       "theme": "Indian traditional tailoring",
