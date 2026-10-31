@@ -864,6 +864,9 @@ function Enquiry() {
   function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const fields = new FormData(event.currentTarget);
+    if (fields.get('website')) return;
+
+    setError('');
     const body = [
       `Name: ${fields.get('name')}`,
       `Email: ${fields.get('email')}`,
