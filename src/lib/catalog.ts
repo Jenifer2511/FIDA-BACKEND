@@ -85,7 +85,7 @@ export const initialProducts: Product[] = [
     "id": "fida-caramel-structured-handbag",
     "name": "Caramel Structured Handbag",
     "category": "Accessories",
-    "description": "A polished caramel handbag with a structured silhouette and a long shoulder strap. Enquire with FIDA about colours, pricing and availability.",
+    "description": "A polished caramel handbag with a structured shape and a long shoulder strap. Enquire with FIDA about colours, pricing and availability.",
     "image": "/assets/products/structured-caramel-handbag.webp",
     "price": "",
     "featured": 0,
@@ -112,4 +112,4 @@ export const initialProducts: Product[] = [
     "published": 1
   }
 ];
-export const company={name:'FIDA',tagline:'Fashions & Lifestyles',since:'2020',location:'Salem, Tamil Nadu, India',phone:'+91 866 746 2522',tel:'+918667462522',email:'sales@fidafashions.com',instagram:'https://instagram.com/fidafashions.global',whatsapp:'https://wa.me/918667462522'};
+export const company={name:'FIDA',tagline:'Fashions & Lifestyles',since:'2020',location:'India',phone:'+91 866 746 2522',tel:'+918667462522',email:'sales@fidafashions.com',instagram:'https://instagram.com/fidafashions.global',whatsapp:'https://wa.me/918667462522'};

@@ -6,7 +6,6 @@
 .product-reveal .product-image>img{transition:transform .65s cubic-bezier(.2,.7,.2,1)}
 @media(hover:hover){.product-reveal .product-image:hover>img{transform:scale(1.025)}}
 .product-reveal .product-image::before{content:'';position:absolute;z-index:1;inset:0;pointer-events:none;opacity:var(--piece-veil);background:linear-gradient(115deg,#2e1b1000 24%,#e4c8a15c 49%,#26160d80 100%);mix-blend-mode:multiply}
-.product-reveal .product-number{z-index:2;font-size:10px;font-weight:750;letter-spacing:.12em;color:#fff7dc;text-shadow:0 1px 8px #24150980}
 .product-reveal .product-action{z-index:3;font-weight:700;letter-spacing:.035em;color:#332015;background:#fff3dceF}
 .product-reveal .product-caption,.product-reveal .product-price{transform:translate3d(0,var(--piece-caption-y),0);opacity:var(--piece-caption-opacity)}
 .product-reveal .product-caption{position:relative}
@@ -18,5 +17,5 @@
 .product-reveal:focus-within .product-caption,.product-reveal:focus-within .product-price{opacity:1;transform:none}
 .product-reveal:focus-within .product-image>img{transform:none}
 @media(hover:hover){.product-reveal .product-image:hover .product-action{transform:translateY(0)}}
-@media(max-width:760px){.product-reveal .product-number{font-size:9px;top:13px;left:13px}.product-reveal .product-caption h3{font-size:clamp(20px,5.6vw,26px);font-weight:650}.product-reveal .product-caption .eyebrow{font-size:7px}.product-reveal .product-price{font-size:9px;line-height:1.7}}
+@media(max-width:760px){.product-reveal .product-caption h3{font-size:clamp(20px,5.6vw,26px);font-weight:650}.product-reveal .product-caption .eyebrow{font-size:7px}.product-reveal .product-price{font-size:9px;line-height:1.7}}
 @media(prefers-reduced-motion:reduce){.product-reveal .product-image{clip-path:none!important;will-change:auto}.product-reveal .product-image>img{transform:none!important;will-change:auto}.product-reveal .product-image::before{display:none}.product-reveal .product-caption,.product-reveal .product-price{opacity:1!important;transform:none!important}.product-reveal .product-caption::before{transform:none}.product-reveal .product-action{transition:none}}

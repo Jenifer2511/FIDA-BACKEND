@@ -8,7 +8,7 @@ import './cinematic-landing.css';
 
 const daylight = '/assets/cinematic/palace-daylight.webp';
 const twilight = '/assets/cinematic/palace-twilight.webp';
-const chapters = ['01 / THE FIRST LIGHT', '02 / A DIFFERENT LIGHT', '03 / YOUR MOMENT'];
+const chapters = ['THE FIRST LIGHT', 'A DIFFERENT LIGHT', 'YOUR MOMENT'];
 
 /** Two full-bleed photographs, one reversible scroll-controlled film aperture. */
 export function CinematicLanding() {
@@ -170,7 +170,7 @@ export function CinematicLanding() {
         <div className="fida-film-rail">
           <span className="fida-film-scroll"><ArrowDown size={16} aria-hidden="true" /><span>SCROLL TO<br />FEEL THE STORY</span></span>
           <div className="fida-film-position" aria-hidden="true">
-            <span className="fida-film-chapter">01 / THE FIRST LIGHT</span>
+            <span className="fida-film-chapter">THE FIRST LIGHT</span>
             <span className="fida-film-progress"><i className="fida-film-progress-fill" /></span>
           </div>
           <a className="fida-film-collection" href="/products"><span>Discover the collection</span><ArrowUpRight size={20} aria-hidden="true" /></a>

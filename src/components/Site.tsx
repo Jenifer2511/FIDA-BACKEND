@@ -415,10 +415,6 @@ function ProductCard({
           loading="lazy"
         />
 
-        <span className="product-number">
-          0{index + 1}
-        </span>
-
         <span className="product-action">
           View this piece
           <ArrowUpRight size={18} aria-hidden="true" />
@@ -451,7 +447,7 @@ function Home() {
     },
     {
       name: 'Eveningwear',
-      subtitle: 'A sculptural silhouette',
+      subtitle: 'A sculptural shape',
       image: '/assets/distinct/evening-mobile.webp',
       href: '/products',
     },
@@ -533,7 +529,7 @@ function Home() {
         </div>
 
         <p className="home-films-label">
-          CONSIDERED SILHOUETTES. YOUR OWN EXPRESSION.
+          CONSIDERED SHAPES. YOUR OWN EXPRESSION.
         </p>
       </section>
 
@@ -557,7 +553,7 @@ function Home() {
         </div>
 
         <div className="world-cards">
-          {worldCards.map((card, index) => (
+          {worldCards.map(card => (
             <a
               className="world-card"
               href={card.href}
@@ -568,10 +564,6 @@ function Home() {
                 alt={`${card.name} fashion inspiration`}
                 loading="lazy"
               />
-
-              <span className="world-index">
-                0{index + 1}
-              </span>
 
               <div>
                 <p>{card.subtitle}</p>
@@ -907,7 +899,7 @@ function Enquiry() {
     ],
     [
       'Where is FIDA based?',
-      'FIDA is based in Salem, Tamil Nadu, India, and serves customers across India, Sri Lanka and the UAE.',
+      'FIDA is headquartered in India, with branches in Sri Lanka and the UAE.',
     ],
     [
       'Can I discuss wholesale or export?',
@@ -1183,7 +1175,7 @@ function Contact() {
       >
         <div className="contact-content">
           <p className="eyebrow">
-            04 / MOROCCO — THE WARMTH OF CONNECTION
+            MOROCCO — THE WARMTH OF CONNECTION
           </p>
 
           <h2 className="contact-content-title">
@@ -1222,15 +1214,15 @@ function Contact() {
             </a>
 
             <a
-              href="https://www.google.com/maps/search/?api=1&query=Salem%2C%20Tamil%20Nadu%2C%20India"
+              href="https://www.google.com/maps/search/?api=1&query=India"
               target="_blank"
               rel="noreferrer"
             >
               <MapPin size={19} aria-hidden="true" />
 
               <div>
-                <span>OUR HOME</span>
-                <p>Salem, Tamil Nadu, India</p>
+                <span>HEADQUARTERS</span>
+                <p>India</p>
               </div>
 
               <ArrowUpRight aria-hidden="true" />
@@ -1275,9 +1267,6 @@ function Contact() {
             <em>A shared love of beautiful things.</em>
           </p>
 
-          <span className="visual-caption">
-          AN EDITORIAL INSPIRATION
-          </span>
         </div>
       </section>
 
@@ -1289,23 +1278,22 @@ function Contact() {
         <div>
           <h2>
             India
-            <span>OUR HOME</span>
+            <span>HEADQUARTERS</span>
           </h2>
 
           <h2>
             Sri Lanka
-            <span>OUR REACH</span>
+            <span>BRANCH</span>
           </h2>
 
           <h2>
             United Arab Emirates
-            <span>OUR REACH</span>
+            <span>BRANCH</span>
           </h2>
         </div>
 
         <p>
-          Our headquarters are in INDIA. Sri Lanka and the UAE are
-          markets we serve.
+          India is our headquarters, with branches in Sri Lanka and the UAE.
           <br />
           For visit details or export enquiries, contact our team
           before making plans.
@@ -1424,7 +1412,8 @@ function Story() {
 
           <p>
             Today, our India roots connect us with customers across
-            India, Sri Lanka and the UAE. Our perspective keeps
+            India, Sri Lanka and the UAE. Our headquarters are in India,
+            with branches in Sri Lanka and the UAE. Our perspective keeps
             growing. Our love of beautiful clothing remains at the
             heart of it.
           </p>
