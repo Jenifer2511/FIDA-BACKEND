@@ -20,7 +20,6 @@ import {
 import {
   ArrowUpRight,
   ArrowRight,
-  ChevronDown,
   Menu,
   X,
   Search,
@@ -614,284 +613,190 @@ function Home() {
 
 function Products() {
   const { products, error, loading } = useProducts();
-  const [selectedProduct, setSelectedProduct] = useState(() => {
-    const requestedId = new URLSearchParams(window.location.search).get('product');
-    return products.find(product => product.id === requestedId) || null;
-  });
+  const ROOT = 'Collections';
+  const WOMEN = 'Women’s Wear';
+  const normalise = (value: string) => value.trim().toLowerCase().replace(/[’']/g, '');
+  const canonical = (value: string) => {
+    const key = normalise(value);
+    if (['accessories', 'accessory', 'bags', 'handbags'].includes(key)) return 'Accessories';
+    if (['saree', 'sarees'].includes(key)) return 'Sarees';
+    if (['off saree', 'off sarees'].includes(key)) return 'Off Sarees';
+    return FIDA_CATEGORIES.find(category => normalise(category) === key) || value.trim();
+  };
+  const readFilter = () => {
+    const requested = new URLSearchParams(window.location.search).get('category') || '';
+    if (!requested || ['all pieces', 'collections'].includes(normalise(requested))) return ROOT;
+    if (['womens wear', 'women wear', 'womenswear'].includes(normalise(requested))) return WOMEN;
+    return canonical(requested) === 'Off Sarees' ? 'Sarees' : canonical(requested);
+  };
+  const [filter, setFilter] = useState(readFilter);
+  const [selectedId, setSelectedId] = useState(() => new URLSearchParams(window.location.search).get('product'));
+  const [search, setSearch] = useState('');
+  const selectedProduct = products.find(product => product.id === selectedId) || null;
 
   useEffect(() => {
-    const syncProductFromUrl = () => {
-      const requestedId = new URLSearchParams(window.location.search).get('product');
-      setSelectedProduct(products.find(product => product.id === requestedId) || null);
+    const sync = () => {
+      setFilter(readFilter());
+      setSelectedId(new URLSearchParams(window.location.search).get('product'));
+      setSearch('');
     };
-    window.addEventListener('popstate', syncProductFromUrl);
-    return () => window.removeEventListener('popstate', syncProductFromUrl);
-  }, [products]);
+    window.addEventListener('popstate', sync);
+    return () => window.removeEventListener('popstate', sync);
+    // URL parsing uses the same category naming rules throughout this component.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  const normalise = (category: string) => category.trim().toLowerCase();
-  const categories = FIDA_CATEGORIES;
-  const womenWearCategories = categories.filter(category => category !== 'Accessories');
+  const womenCategories = Array.from(
+  new Set<string>([
+    ...FIDA_CATEGORIES.filter(category => category !== 'Accessories'),
 
-  const [filter, setFilter] = useState(() => {
-    if (typeof window === 'undefined') return 'All pieces';
-    const requested = new URLSearchParams(window.location.search).get('category');
-    return categories.find(category => normalise(category) === normalise(requested || ''))
-      || 'All pieces';
-  });
-  const [search, setSearch] = useState('');
-  const [womenCategoriesOpen, setWomenCategoriesOpen] = useState(() => {
-    if (typeof window === 'undefined') return false;
-    const requested = new URLSearchParams(window.location.search).get('category');
-    return Boolean(requested && normalise(requested) !== 'accessories');
-  });
-
-  const categoryProducts = products.filter(product =>
-    filter === 'All pieces'
-      || (filter === 'Sarees'
-        ? ['sarees', 'off sarees'].includes(normalise(product.category))
-        : normalise(product.category) === normalise(filter)),
-  );
-  const searchTerm = search.trim().toLowerCase();
+    ...products
+      .map(product => canonical(product.category))
+      .filter(
+        category =>
+          category &&
+          !['Accessories', 'Off Sarees', WOMEN, ROOT].includes(category),
+      ),
+  ]),
+).filter(
+  category =>
+    !['frock', 'frocks', 'blouse', 'blouses'].includes(
+      normalise(category),
+    ),
+);
+  const isCategoryPage = filter !== ROOT && filter !== WOMEN;
+  const belongsTo = (product: Product, category: string) => {
+    const value = canonical(product.category);
+    return category === 'Sarees'
+      ? value === 'Sarees' || value === 'Off Sarees'
+      : normalise(value) === normalise(category);
+  };
+  const categoryProducts = isCategoryPage ? products.filter(product => belongsTo(product, filter)) : [];
   const visible = categoryProducts.filter(product =>
-    `${product.name} ${product.category} ${product.description}`
-      .toLowerCase()
-      .includes(searchTerm),
+    `${product.name} ${product.category} ${product.description}`.toLowerCase().includes(search.trim().toLowerCase()),
   );
-  const sarees = visible.filter(product => normalise(product.category) === 'sarees');
-  const offSarees = visible.filter(product => normalise(product.category) === 'off sarees');
-  const emptyCategory = filter !== 'All pieces' && categoryProducts.length === 0;
+const fallbackImage = (category: string) => {
+  if (category === 'Kurtis') {
+    return '/assets/categories/kurtis.jpg';
+  }
+
+  if (category === 'Sarees') {
+    return '/assets/categories/sarees.jpg';
+  }
+
+  if (category === 'Premium Abayas') {
+    return '/assets/categories/premium-abayas.jpg';
+  }
+
+  if (category === 'Accessories') {
+    return '/assets/products/structured-caramel-handbag.webp';
+  }
+
+  if (
+    category === 'Lehengas' ||
+    category === 'Wedding Collections'
+  ) {
+    return '/assets/products/ivory-embroidered-lehenga.webp';
+  }
+
+  return '/assets/brand/womens.png';
+};
+
+const categoryImage = (category: string) => {
+  const name = canonical(category);
+
+  if (['Kurtis', 'Sarees', 'Premium Abayas'].includes(name)) {
+    return fallbackImage(name);
+  }
+
+  return (
+    products.find(
+      product => belongsTo(product, category) && product.image,
+    )?.image || fallbackImage(category)
+  );
+};
+
+  function navigate(category: string, productId: string | null = null) {
+    const url = new URL(window.location.href);
+    if (category === ROOT) url.searchParams.delete('category');
+    else url.searchParams.set('category', category);
+    if (productId) url.searchParams.set('product', productId);
+    else url.searchParams.delete('product');
+    url.hash = 'collection';
+    window.history.pushState(null, '', `${url.pathname}${url.search}${url.hash}`);
+    setFilter(category); setSelectedId(productId); setSearch('');
+  }
+
+  function renderCategoryCard(category: string, image: string, subtitle: string, featured = false) {
+    return (
+      <a className={`collection-category-card ${featured ? 'is-featured' : ''}`} key={category}
+        href={`/products?category=${encodeURIComponent(category)}#collection`}
+        onClick={event => {
+          if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+          event.preventDefault(); navigate(category);
+        }}>
+        <div className="collection-category-photo"><img src={image} alt="" loading="lazy" onError={event => {
+          if (event.currentTarget.dataset.fallback) return;
+          event.currentTarget.dataset.fallback = 'true';
+          event.currentTarget.src = fallbackImage(category);
+        }} /></div>
+        <div className="collection-category-caption"><div><h2>{category}</h2><p>{subtitle}</p></div><ArrowUpRight size={22} aria-hidden="true" /></div>
+      </a>
+    );
+  }
 
   function renderProductGrid(items: Product[]) {
-    return (
-      <div className="product-grid">
-        {items.map((product, index) => (
-          <ProductCard
-            product={product}
-            key={product.id}
-            index={index}
-            onSelect={selectProduct}
-          />
-        ))}
-      </div>
-    );
-  }
-
-  function selectProduct(product: Product) {
-    setSelectedProduct(product);
-    const url = new URL(window.location.href);
-    url.searchParams.set('product', product.id);
-    window.history.pushState(null, '', `${url.pathname}${url.search}${url.hash}`);
-  }
-
-  function closeProduct() {
-    setSelectedProduct(null);
-    const url = new URL(window.location.href);
-    url.searchParams.delete('product');
-    window.history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`);
-  }
-
-  function selectCategory(category: string) {
-    setFilter(category);
-    const url = new URL(window.location.href);
-    if (category === 'All pieces') url.searchParams.delete('category');
-    else url.searchParams.set('category', category);
-    window.history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`);
-  }
-
-  function selectWomenCategory(category: string) {
-    selectCategory(category);
-    setWomenCategoriesOpen(false);
-  }
-
-  function resetFilters() {
-    setSearch('');
-    selectCategory('All pieces');
-  }
-
-  if (selectedProduct) {
-    return (
-      <>
-        <CultureChapter kind="products" />
-        <section className="section full-collection" id="collection">
-          <ProductDetail product={selectedProduct} onBack={closeProduct} />
-        </section>
-      </>
-    );
+    return <div className="product-grid compact-collection-products">{items.map((product, index) => (
+      <ProductCard key={product.id} product={product} index={index}
+        onSelect={product => navigate(filter, product.id)} />
+    ))}</div>;
   }
 
   return (
     <>
       <CultureChapter kind="products" />
+      <header className="collection-intro">
+        <p className="eyebrow">THE FIDA COLLECTION</p>
+        <h1>{filter === ROOT ? <>Find your <em>expression.</em></> : filter}</h1>
+        <p>{filter === ROOT ? 'Choose a collection to explore.' : filter === WOMEN ? 'Choose a category to discover its pieces.' : 'Explore the pieces in this category.'}</p>
+      </header>
+      <section className="section full-collection category-first-collection" id="collection">
+        <nav className="collection-breadcrumbs" aria-label="Collection navigation">
+          <button type="button" onClick={() => navigate(ROOT)} aria-current={filter === ROOT && !selectedId ? 'page' : undefined}>Collections</button>
+          {filter !== ROOT && <><span aria-hidden="true">/</span><button type="button" onClick={() => navigate(filter === 'Accessories' ? 'Accessories' : WOMEN)} aria-current={filter === WOMEN && !selectedId ? 'page' : undefined}>{filter === 'Accessories' ? 'Accessories' : WOMEN}</button></>}
+          {isCategoryPage && filter !== 'Accessories' && <><span aria-hidden="true">/</span><button type="button" onClick={() => navigate(filter)} aria-current={!selectedId ? 'page' : undefined}>{filter}</button></>}
+          {selectedProduct && <><span aria-hidden="true">/</span><span aria-current="page">{selectedProduct.name}</span></>}
+        </nav>
 
-      <section
-        className="section full-collection"
-        id="collection"
-      >
-        <div className="collection-toolbar">
-          <div
-            className="filter-tabs collection-category-filters"
-            role="group"
-            aria-label="Filter collection"
-          >
-            <div className="women-category-dropdown">
-              <button
-                type="button"
-                className="women-category-toggle"
-                data-active={filter !== 'All pieces' && filter !== 'Accessories'}
-                aria-expanded={womenCategoriesOpen}
-                aria-controls="women-category-options"
-                onClick={() => setWomenCategoriesOpen(open => !open)}
-              >
-                <span>
-                  {filter !== 'All pieces' && filter !== 'Accessories'
-                    ? `Women’s wear · ${filter}`
-                    : 'Women’s wear'}
-                </span>
-                <ChevronDown size={16} aria-hidden="true" />
-              </button>
-              <div
-                className="women-category-options"
-                id="women-category-options"
-                role="group"
-                aria-label="Women’s wear categories"
-                hidden={!womenCategoriesOpen}
-              >
-                  <button
-                    type="button"
-                    aria-pressed={filter === 'All pieces'}
-                    onClick={() => selectWomenCategory('All pieces')}
-                  >
-                    All pieces
-                  </button>
-                  {womenWearCategories.map(category => (
-                    <button
-                      type="button"
-                      aria-pressed={filter === category}
-                      onClick={() => selectWomenCategory(category)}
-                      key={category}
-                    >
-                      {category}
-                    </button>
-                  ))}
-              </div>
-            </div>
-            <button
-              type="button"
-              aria-pressed={filter === 'Accessories'}
-              onClick={() => {
-                setWomenCategoriesOpen(false);
-                selectCategory('Accessories');
-              }}
-            >
-              Accessories
-            </button>
+        {error && <p className="notice">Live product updates are temporarily unavailable. Showing the saved catalogue. <button type="button" onClick={() => window.location.reload()}>Try again</button></p>}
+
+        {selectedId ? (
+          selectedProduct ? <ProductDetail product={selectedProduct} onBack={() => navigate(filter)} />
+            : <div className="empty-state"><h2>{loading ? 'Loading this piece…' : 'This piece is unavailable.'}</h2><button type="button" className="button" onClick={() => navigate(filter)}>Back to collection</button></div>
+        ) : filter === ROOT ? (
+          <div className="collection-category-grid collection-main-categories">
+            {renderCategoryCard(WOMEN, '/assets/brand/womens.png', 'Kurtis, lehengas, sarees and more', true)}
+            {renderCategoryCard('Accessories', categoryImage('Accessories'), 'Discover bags and finishing touches', true)}
           </div>
-
-          <label className="search-field">
-            <Search size={17} aria-hidden="true" />
-
-            <input
-              aria-label="Search the collection"
-              placeholder="Find your piece"
-              value={search}
-              onChange={event => setSearch(event.target.value)}
-            />
-          </label>
-        </div>
-
-        <div className="collection-count">
-          <span role="status" aria-live="polite" aria-atomic="true"
-            aria-label={`${visible.length} pieces in ${filter}`}>
-            {loading
-              ? 'REFRESHING COLLECTION'
-              : filter === 'Accessories'
-                ? 'Bags'
-                : `${visible.length} PIECES`}
-          </span>
-
-          <span>CHOSEN FOR YOU, BY FIDA</span>
-        </div>
-
-        {error && (
-          <p className="notice">
-            Showing the original FIDA edit while live updates are
-            unavailable.{' '}
-            <button
-              type="button"
-              onClick={() => window.location.reload()}
-            >
-              Try again
-            </button>
-          </p>
-        )}
-
-        {filter === 'Sarees' ? (
+        ) : filter === WOMEN ? (
+          <div className="collection-category-grid collection-women-categories">
+            {womenCategories.map(category => renderCategoryCard(category, categoryImage(category), 'Explore this category'))}
+          </div>
+        ) : (
           <>
-            <section className="collection-category-section">
-              <h2 className="eyebrow">Sarees</h2>
-              {renderProductGrid(sarees)}
-            </section>
-            <section className="collection-category-section">
-              <h2 className="eyebrow">Off Sarees</h2>
-              {renderProductGrid(offSarees)}
-            </section>
-          </>
-        ) : renderProductGrid(visible)}
-
-        {!visible.length && (
-          <div className="empty-state">
-            <h2>
-              {emptyCategory ? <em>{filter}</em> : <>A little more <em>possibility.</em></>}
-            </h2>
-
-            <p>
-              {emptyCategory
-                ? 'No pieces are listed in this category yet. Enquire with FIDA about what you are looking for.'
-                : 'No pieces match your search. Try another word or explore the full collection.'}
-            </p>
-
-            <div className="collection-empty-actions">
-              {emptyCategory && (
-                <a className="button"
-                  href={`/enquiry?category=${encodeURIComponent(filter)}#enquiry-form`}>
-                  Enquire about this category
-                  <ArrowUpRight size={17} aria-hidden="true" />
-                </a>
-              )}
-              <button
-                className="button"
-                type="button"
-                onClick={resetFilters}
-              >
-                View all pieces
-                <ArrowRight size={17} aria-hidden="true" />
-              </button>
+            <div className="collection-toolbar collection-product-toolbar">
+              <p className="collection-count" role="status" aria-live="polite">{loading ? 'REFRESHING COLLECTION' : `${visible.length} ${visible.length === 1 ? 'PIECE' : 'PIECES'}`}</p>
+              <label className="search-field"><Search size={17} aria-hidden="true" /><input aria-label={`Search ${filter}`} placeholder="Search this category" value={search} onChange={event => setSearch(event.target.value)} /></label>
             </div>
-          </div>
+            {filter === 'Sarees' ? ['Sarees', 'Off Sarees'].map(section => {
+              const items = visible.filter(product => canonical(product.category) === section);
+              return <section className="collection-category-section" key={section}><h2 className="eyebrow">{section}</h2>{items.length ? renderProductGrid(items) : <p className="collection-section-empty">No pieces in this section yet.</p>}</section>;
+            }) : renderProductGrid(visible)}
+            {!visible.length && !loading && <div className="empty-state"><h2>No pieces to show yet.</h2><p>{search ? 'Try another search in this category.' : 'New pieces will appear here when they are published.'}</p><div className="collection-empty-actions">{search && <button type="button" className="button" onClick={() => setSearch('')}>Clear search</button>}<button type="button" className="button" onClick={() => navigate(filter === 'Accessories' ? ROOT : WOMEN)}>Back to categories<ArrowRight size={17} /></button></div></div>}
+          </>
         )}
-
-        <p className="collection-note">
-          Every piece begins with a conversation. Ask us about
-          sizing, colours, pricing and availability.
-          <br />
-          Collection imagery is drawn from FIDA’s supplied catalogue;
-          our team can confirm the current details.
-        </p>
       </section>
-
-      <section className="quote-band">
-        <p className="eyebrow">STYLE IS PERSONAL</p>
-
-        <h2>
-          Find what feels
-          <br />
-          <em>like you.</em>
-        </h2>
-
-        <ArrowLink href="/enquiry">
-          Let us help you choose
-        </ArrowLink>
-      </section>
+      <section className="quote-band"><p className="eyebrow">STYLE IS PERSONAL</p><h2>Find what feels<br /><em>like you.</em></h2><ArrowLink href="/enquiry">Let us help you choose</ArrowLink></section>
     </>
   );
 }
@@ -1418,12 +1323,12 @@ function Story() {
 
         <div>
           <p>
-            <br></br>To the tailors, cutters, embroiderers and makers.<br></br> To the
-            early mornings and the patient hands.<br></br> To the skill passed
+            To the tailors, cutters, embroiderers and makers. To the
+            early mornings and the patient hands. To the skill passed
             from one generation to the next.
-            
           </p>
-          
+
+          <p>This is for you.</p>
 
           <span className="signature">
             With gratitude, FIDA
