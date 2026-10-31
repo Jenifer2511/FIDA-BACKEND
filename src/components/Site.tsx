@@ -63,7 +63,7 @@ const FIDA_CATEGORIES = [
   'Daily Wears',
   'Premium Abayas',
   'Wedding Collections',
-  'Accessories',
+  'The Bag Edit',
 ] as const;
 
 const logoStyles = `
