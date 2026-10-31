@@ -1,0 +1,1641 @@
+{
+  "story": [
+    "/assets/editorial/36883230.jpg",
+    "/assets/editorial/2974113.jpg",
+    "/assets/editorial/4492079.jpg",
+    "/assets/editorial/29222239.jpg",
+    "/assets/editorial/6461121.jpg",
+    "/assets/editorial/36356352.jpg",
+    "/assets/editorial/2974110.jpg",
+    "/assets/editorial/4622206.jpg",
+    "/assets/editorial/9983579.jpg",
+    "/assets/editorial/35909468.jpg",
+    "/assets/editorial/4621914.jpg",
+    "/assets/editorial/11482148.jpg",
+    "/assets/editorial/39156647.jpg",
+    "/assets/editorial/12362547.jpg",
+    "/assets/editorial/37232411.jpg",
+    "/assets/editorial/11482124.jpg",
+    "/assets/editorial/6461151.jpg",
+    "/assets/editorial/34563856.jpg",
+    "/assets/editorial/36731207.jpg",
+    "/assets/editorial/4621910.jpg",
+    "/assets/editorial/16468623.jpg",
+    "/assets/editorial/38835539.jpg",
+    "/assets/editorial/7202800.jpg",
+    "/assets/editorial/11359034.jpg",
+    "/assets/editorial/7776116.jpg",
+    "/assets/editorial/8386664.jpg",
+    "/assets/editorial/5418895.jpg",
+    "/assets/editorial/10434487.jpg",
+    "/assets/editorial/6593778.jpg",
+    "/assets/editorial/16797461.jpg",
+    "/assets/editorial/9853469.jpg",
+    "/assets/editorial/6593777.jpg",
+    "/assets/editorial/7203450.jpg",
+    "/assets/editorial/8396312.jpg",
+    "/assets/editorial/8386641.jpg",
+    "/assets/editorial/20441555.jpg",
+    "/assets/editorial/31884491.jpg",
+    "/assets/editorial/5352628.jpg",
+    "/assets/editorial/7202782.jpg",
+    "/assets/editorial/16029813.jpg",
+    "/assets/editorial/7060330.jpg",
+    "/assets/editorial/20862358.jpg",
+    "/assets/editorial/7202773.jpg",
+    "/assets/editorial/7202801.jpg",
+    "/assets/editorial/15591934.jpg",
+    "/assets/editorial/27204291.jpg",
+    "/assets/editorial/6069980.jpg",
+    "/assets/editorial/8386647.jpg",
+    "/assets/editorial/29796875.jpg",
+    "/assets/editorial/4621891.jpg",
+    "/assets/editorial/37232390.jpg",
+    "/assets/editorial/27893063.jpg",
+    "/assets/editorial/4622205.jpg",
+    "/assets/editorial/7256913.jpg",
+    "/assets/editorial/37232407.jpg",
+    "/assets/editorial/3984840.jpg",
+    "/assets/editorial/6876052.jpg",
+    "/assets/editorial/4622216.jpg",
+    "/assets/editorial/36731265.jpg",
+    "/assets/editorial/38948867.jpg",
+    "/assets/editorial/7778041.jpg",
+    "/assets/editorial/33656709.jpg",
+    "/assets/editorial/7256922.jpg",
+    "/assets/editorial/33187300.jpg",
+    "/assets/editorial/29210056.jpg",
+    "/assets/editorial/33706427.jpg",
+    "/assets/editorial/14928074.jpg",
+    "/assets/editorial/7920188.jpg",
+    "/assets/editorial/34039340.jpg",
+    "/assets/editorial/1846014.jpg",
+    "/assets/editorial/28316406.jpg",
+    "/assets/editorial/30004204.jpg",
+    "/assets/editorial/37054322.jpg",
+    "/assets/editorial/39559946.jpg",
+    "/assets/editorial/20161456.jpg",
+    "/assets/editorial/8751532.jpg",
+    "/assets/editorial/14205210.jpg",
+    "/assets/editorial/39857905.jpg",
+    "/assets/editorial/4427652.jpg",
+    "/assets/editorial/33754389.jpg",
+    "/assets/editorial/20957555.jpg",
+    "/assets/editorial/38850343.jpg",
+    "/assets/editorial/7176438.jpg",
+    "/assets/editorial/17876038.jpg",
+    "/assets/editorial/28058186.jpg",
+    "/assets/editorial/7176430.jpg",
+    "/assets/editorial/19600007.jpg",
+    "/assets/editorial/35108817.jpg",
+    "/assets/editorial/9340638.jpg",
+    "/assets/editorial/19060366.jpg",
+    "/assets/editorial/20435171.jpg",
+    "/assets/editorial/31305389.jpg",
+    "/assets/editorial/32920732.jpg",
+    "/assets/editorial/27315522.jpg",
+    "/assets/editorial/27601335.jpg",
+    "/assets/editorial/5745777.jpg",
+    "/assets/editorial/11508658.jpg",
+    "/assets/editorial/27520205.jpg",
+    "/assets/editorial/10011219.jpg",
+    "/assets/editorial/32946565.jpg",
+    "/assets/editorial/35153051.jpg",
+    "/assets/editorial/10211119.jpg",
+    "/assets/editorial/12809241.jpg",
+    "/assets/editorial/27467505.jpg",
+    "/assets/editorial/37604279.jpg",
+    "/assets/editorial/6716548.jpg",
+    "/assets/editorial/30961871.jpg",
+    "/assets/editorial/34954074.jpg",
+    "/assets/editorial/8640763.jpg",
+    "/assets/editorial/33128243.jpg",
+    "/assets/editorial/37989650.jpg",
+    "/assets/editorial/7958022.jpg",
+    "/assets/editorial/6850486.jpg",
+    "/assets/editorial/13368318.jpg",
+    "/assets/editorial/11585380.jpg",
+    "/assets/editorial/7641151.jpg",
+    "/assets/editorial/11255289.jpg",
+    "/assets/editorial/34191411.jpg",
+    "/assets/editorial/19026106.jpg",
+    "/assets/editorial/4863009.jpg",
+    "/assets/editorial/5789582.jpg",
+    "/assets/editorial/31853353.jpg",
+    "/assets/editorial/34100445.jpg",
+    "/assets/editorial/6275967.jpg",
+    "/assets/editorial/6276056.jpg",
+    "/assets/editorial/38951975.jpg",
+    "/assets/editorial/15949827.jpg",
+    "/assets/editorial/30243795.jpg",
+    "/assets/editorial/7641027.jpg",
+    "/assets/editorial/7138974.jpg",
+    "/assets/editorial/6487380.jpg",
+    "/assets/editorial/36656824.jpg",
+    "/assets/editorial/6764920.jpg",
+    "/assets/editorial/236748.jpg",
+    "/assets/editorial/7498815.jpg",
+    "/assets/editorial/5504775.jpg"
+  ],
+  "portrait": "/assets/portrait.jpg",
+  "chapters": {
+    "france": "/assets/france.jpg",
+    "japan": "/assets/japan-fashion.jpg",
+    "italy": "/assets/italy.jpg"
+  },
+  "sources": [
+    {
+      "id": "36883230",
+      "category": "tailor",
+      "url": "https://images.pexels.com/photos/36883230/pexels-photo-36883230.jpeg",
+      "photographer": "andranik paradyan",
+      "source": "https://www.pexels.com/photo/36883230/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/36883230.jpg"
+    },
+    {
+      "id": "2974113",
+      "category": "tailor",
+      "url": "https://images.pexels.com/photos/2974113/pexels-photo-2974113.jpeg",
+      "photographer": "chuck",
+      "source": "https://www.pexels.com/photo/2974113/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/2974113.jpg"
+    },
+    {
+      "id": "4492079",
+      "category": "tailor",
+      "url": "https://images.pexels.com/photos/4492079/pexels-photo-4492079.jpeg",
+      "photographer": "ivan s",
+      "source": "https://www.pexels.com/photo/4492079/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/4492079.jpg"
+    },
+    {
+      "id": "29222239",
+      "category": "tailor",
+      "url": "https://images.pexels.com/photos/29222239/pexels-photo-29222239.jpeg",
+      "photographer": "hellram",
+      "source": "https://www.pexels.com/photo/29222239/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/29222239.jpg"
+    },
+    {
+      "id": "6461121",
+      "category": "tailor",
+      "url": "https://images.pexels.com/photos/6461121/pexels-photo-6461121.jpeg",
+      "photographer": "pavel danilyuk",
+      "source": "https://www.pexels.com/photo/6461121/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/6461121.jpg"
+    },
+    {
+      "id": "36356352",
+      "category": "tailor",
+      "url": "https://images.pexels.com/photos/36356352/pexels-photo-36356352.jpeg",
+      "photographer": "erwin bosman",
+      "source": "https://www.pexels.com/photo/36356352/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/36356352.jpg"
+    },
+    {
+      "id": "2974110",
+      "category": "tailor",
+      "url": "https://images.pexels.com/photos/2974110/pexels-photo-2974110.jpeg",
+      "photographer": "chuck",
+      "source": "https://www.pexels.com/photo/2974110/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/2974110.jpg"
+    },
+    {
+      "id": "4622206",
+      "category": "tailor",
+      "url": "https://images.pexels.com/photos/4622206/pexels-photo-4622206.jpeg",
+      "photographer": "cottonbro",
+      "source": "https://www.pexels.com/photo/4622206/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/4622206.jpg"
+    },
+    {
+      "id": "9983579",
+      "category": "tailor",
+      "url": "https://images.pexels.com/photos/9983579/pexels-photo-9983579.jpeg",
+      "photographer": "88107820",
+      "source": "https://www.pexels.com/photo/9983579/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/9983579.jpg"
+    },
+    {
+      "id": "35909468",
+      "category": "tailor",
+      "url": "https://images.pexels.com/photos/35909468/pexels-photo-35909468.jpeg",
+      "photographer": "danish bashir",
+      "source": "https://www.pexels.com/photo/35909468/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/35909468.jpg"
+    },
+    {
+      "id": "4621914",
+      "category": "tailor",
+      "url": "https://images.pexels.com/photos/4621914/pexels-photo-4621914.jpeg",
+      "photographer": "cottonbro",
+      "source": "https://www.pexels.com/photo/4621914/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/4621914.jpg"
+    },
+    {
+      "id": "11482148",
+      "category": "tailor",
+      "url": "https://images.pexels.com/photos/11482148/pexels-photo-11482148.jpeg",
+      "photographer": "gabriel frank",
+      "source": "https://www.pexels.com/photo/11482148/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/11482148.jpg"
+    },
+    {
+      "id": "39156647",
+      "category": "tailor",
+      "url": "https://images.pexels.com/photos/39156647/pexels-photo-39156647.jpeg",
+      "photographer": "uday veeru",
+      "source": "https://www.pexels.com/photo/39156647/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/39156647.jpg"
+    },
+    {
+      "id": "12362547",
+      "category": "tailor",
+      "url": "https://images.pexels.com/photos/12362547/pexels-photo-12362547.jpeg",
+      "photographer": "jane blaze",
+      "source": "https://www.pexels.com/photo/12362547/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/12362547.jpg"
+    },
+    {
+      "id": "37232411",
+      "category": "tailor",
+      "url": "https://images.pexels.com/photos/37232411/pexels-photo-37232411.jpeg",
+      "photographer": "rakhmatsuwandi",
+      "source": "https://www.pexels.com/photo/37232411/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/37232411.jpg"
+    },
+    {
+      "id": "11482124",
+      "category": "tailor",
+      "url": "https://images.pexels.com/photos/11482124/pexels-photo-11482124.jpeg",
+      "photographer": "gabriel frank",
+      "source": "https://www.pexels.com/photo/11482124/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/11482124.jpg"
+    },
+    {
+      "id": "6461151",
+      "category": "tailor",
+      "url": "https://images.pexels.com/photos/6461151/pexels-photo-6461151.jpeg",
+      "photographer": "pavel danilyuk",
+      "source": "https://www.pexels.com/photo/6461151/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/6461151.jpg"
+    },
+    {
+      "id": "34563856",
+      "category": "tailor",
+      "url": "https://images.pexels.com/photos/34563856/pexels-photo-34563856.jpeg",
+      "photographer": "nurullah cakmak",
+      "source": "https://www.pexels.com/photo/34563856/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/34563856.jpg"
+    },
+    {
+      "id": "36731207",
+      "category": "tailor",
+      "url": "https://images.pexels.com/photos/36731207/pexels-photo-36731207.jpeg",
+      "photographer": "silverkblack",
+      "source": "https://www.pexels.com/photo/36731207/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/36731207.jpg"
+    },
+    {
+      "id": "4621910",
+      "category": "tailor",
+      "url": "https://images.pexels.com/photos/4621910/pexels-photo-4621910.jpeg",
+      "photographer": "cottonbro",
+      "source": "https://www.pexels.com/photo/4621910/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/4621910.jpg"
+    },
+    {
+      "id": "16468623",
+      "category": "tailor",
+      "url": "https://images.pexels.com/photos/16468623/pexels-photo-16468623.jpeg",
+      "photographer": "meyra",
+      "source": "https://www.pexels.com/photo/16468623/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/16468623.jpg"
+    },
+    {
+      "id": "38835539",
+      "category": "tailor",
+      "url": "https://images.pexels.com/photos/38835539/pexels-photo-38835539.jpeg",
+      "photographer": "jahratreza",
+      "source": "https://www.pexels.com/photo/38835539/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/38835539.jpg"
+    },
+    {
+      "id": "7202800",
+      "category": "fashion",
+      "url": "https://images.pexels.com/photos/7202800/pexels-photo-7202800.jpeg",
+      "photographer": "tima miroshnichenko",
+      "source": "https://www.pexels.com/photo/7202800/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/7202800.jpg"
+    },
+    {
+      "id": "11359034",
+      "category": "tailor",
+      "url": "https://images.pexels.com/photos/11359034/pexels-photo-11359034.jpeg",
+      "photographer": "mammiya",
+      "source": "https://www.pexels.com/photo/11359034/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/11359034.jpg"
+    },
+    {
+      "id": "7776116",
+      "category": "tailor",
+      "url": "https://images.pexels.com/photos/7776116/pexels-photo-7776116.jpeg",
+      "photographer": "ron lach",
+      "source": "https://www.pexels.com/photo/7776116/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/7776116.jpg"
+    },
+    {
+      "id": "8386664",
+      "category": "fashion",
+      "url": "https://images.pexels.com/photos/8386664/pexels-photo-8386664.jpeg",
+      "photographer": "ron lach",
+      "source": "https://www.pexels.com/photo/8386664/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/8386664.jpg"
+    },
+    {
+      "id": "5418895",
+      "category": "fashion",
+      "url": "https://images.pexels.com/photos/5418895/pexels-photo-5418895.jpeg",
+      "photographer": "arina krasnikova",
+      "source": "https://www.pexels.com/photo/5418895/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/5418895.jpg"
+    },
+    {
+      "id": "10434487",
+      "category": "fashion",
+      "url": "https://images.pexels.com/photos/10434487/pexels-photo-10434487.jpeg",
+      "photographer": "ilyasick photo",
+      "source": "https://www.pexels.com/photo/10434487/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/10434487.jpg"
+    },
+    {
+      "id": "6593778",
+      "category": "fashion",
+      "url": "https://images.pexels.com/photos/6593778/pexels-photo-6593778.jpeg",
+      "photographer": "shvetsa",
+      "source": "https://www.pexels.com/photo/6593778/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/6593778.jpg"
+    },
+    {
+      "id": "16797461",
+      "category": "fashion",
+      "url": "https://images.pexels.com/photos/16797461/pexels-photo-16797461.jpeg",
+      "photographer": "isabelle francesca santinon",
+      "source": "https://www.pexels.com/photo/16797461/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/16797461.jpg"
+    },
+    {
+      "id": "9853469",
+      "category": "fashion",
+      "url": "https://images.pexels.com/photos/9853469/pexels-photo-9853469.jpeg",
+      "photographer": "ron lach",
+      "source": "https://www.pexels.com/photo/9853469/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/9853469.jpg"
+    },
+    {
+      "id": "6593777",
+      "category": "fashion",
+      "url": "https://images.pexels.com/photos/6593777/pexels-photo-6593777.jpeg",
+      "photographer": "shvetsa",
+      "source": "https://www.pexels.com/photo/6593777/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/6593777.jpg"
+    },
+    {
+      "id": "7203450",
+      "category": "fashion",
+      "url": "https://images.pexels.com/photos/7203450/pexels-photo-7203450.jpeg",
+      "photographer": "tima miroshnichenko",
+      "source": "https://www.pexels.com/photo/7203450/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/7203450.jpg"
+    },
+    {
+      "id": "8396312",
+      "category": "fashion",
+      "url": "https://images.pexels.com/photos/8396312/pexels-photo-8396312.jpeg",
+      "photographer": "ron lach",
+      "source": "https://www.pexels.com/photo/8396312/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/8396312.jpg"
+    },
+    {
+      "id": "8386641",
+      "category": "fashion",
+      "url": "https://images.pexels.com/photos/8386641/pexels-photo-8386641.jpeg",
+      "photographer": "ron lach",
+      "source": "https://www.pexels.com/photo/8386641/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/8386641.jpg"
+    },
+    {
+      "id": "20441555",
+      "category": "fashion",
+      "url": "https://images.pexels.com/photos/20441555/pexels-photo-20441555.jpeg",
+      "photographer": "eyupcan timur",
+      "source": "https://www.pexels.com/photo/20441555/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/20441555.jpg"
+    },
+    {
+      "id": "31884491",
+      "category": "fashion",
+      "url": "https://images.pexels.com/photos/31884491/pexels-photo-31884491.jpeg",
+      "photographer": "kaybee photography",
+      "source": "https://www.pexels.com/photo/31884491/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/31884491.jpg"
+    },
+    {
+      "id": "5352628",
+      "category": "fashion",
+      "url": "https://images.pexels.com/photos/5352628/pexels-photo-5352628.jpeg",
+      "photographer": "n voitkevich",
+      "source": "https://www.pexels.com/photo/5352628/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/5352628.jpg"
+    },
+    {
+      "id": "7202782",
+      "category": "fashion",
+      "url": "https://images.pexels.com/photos/7202782/pexels-photo-7202782.jpeg",
+      "photographer": "tima miroshnichenko",
+      "source": "https://www.pexels.com/photo/7202782/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/7202782.jpg"
+    },
+    {
+      "id": "16029813",
+      "category": "fashion",
+      "url": "https://images.pexels.com/photos/16029813/pexels-photo-16029813.jpeg",
+      "photographer": "bertellifotografia",
+      "source": "https://www.pexels.com/photo/16029813/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/16029813.jpg"
+    },
+    {
+      "id": "7060330",
+      "category": "fashion",
+      "url": "https://images.pexels.com/photos/7060330/pexels-photo-7060330.jpeg",
+      "photographer": "agung pratama",
+      "source": "https://www.pexels.com/photo/7060330/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/7060330.jpg"
+    },
+    {
+      "id": "20862358",
+      "category": "fashion",
+      "url": "https://images.pexels.com/photos/20862358/pexels-photo-20862358.jpeg",
+      "photographer": "malcolnphoto",
+      "source": "https://www.pexels.com/photo/20862358/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/20862358.jpg"
+    },
+    {
+      "id": "7202773",
+      "category": "fashion",
+      "url": "https://images.pexels.com/photos/7202773/pexels-photo-7202773.jpeg",
+      "photographer": "tima miroshnichenko",
+      "source": "https://www.pexels.com/photo/7202773/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/7202773.jpg"
+    },
+    {
+      "id": "7202801",
+      "category": "fashion",
+      "url": "https://images.pexels.com/photos/7202801/pexels-photo-7202801.jpeg",
+      "photographer": "tima miroshnichenko",
+      "source": "https://www.pexels.com/photo/7202801/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/7202801.jpg"
+    },
+    {
+      "id": "15591934",
+      "category": "fashion",
+      "url": "https://images.pexels.com/photos/15591934/pexels-photo-15591934.jpeg",
+      "photographer": "mirzagraphy",
+      "source": "https://www.pexels.com/photo/15591934/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/15591934.jpg"
+    },
+    {
+      "id": "27204291",
+      "category": "fashion",
+      "url": "https://images.pexels.com/photos/27204291/pexels-photo-27204291.jpeg",
+      "photographer": "jose martin segura benites",
+      "source": "https://www.pexels.com/photo/27204291/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/27204291.jpg"
+    },
+    {
+      "id": "6069980",
+      "category": "fashion",
+      "url": "https://images.pexels.com/photos/6069980/pexels-photo-6069980.jpeg",
+      "photographer": "cottonbro",
+      "source": "https://www.pexels.com/photo/6069980/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/6069980.jpg"
+    },
+    {
+      "id": "8386647",
+      "category": "fashion",
+      "url": "https://images.pexels.com/photos/8386647/pexels-photo-8386647.jpeg",
+      "photographer": "ron lach",
+      "source": "https://www.pexels.com/photo/8386647/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/8386647.jpg"
+    },
+    {
+      "id": "29796875",
+      "category": "sewing",
+      "url": "https://images.pexels.com/photos/29796875/pexels-photo-29796875.jpeg",
+      "photographer": "danghai",
+      "source": "https://www.pexels.com/photo/29796875/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/29796875.jpg"
+    },
+    {
+      "id": "4621891",
+      "category": "sewing",
+      "url": "https://images.pexels.com/photos/4621891/pexels-photo-4621891.jpeg",
+      "photographer": "cottonbro",
+      "source": "https://www.pexels.com/photo/4621891/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/4621891.jpg"
+    },
+    {
+      "id": "37232390",
+      "category": "sewing",
+      "url": "https://images.pexels.com/photos/37232390/pexels-photo-37232390.jpeg",
+      "photographer": "rakhmatsuwandi",
+      "source": "https://www.pexels.com/photo/37232390/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/37232390.jpg"
+    },
+    {
+      "id": "27893063",
+      "category": "sewing",
+      "url": "https://images.pexels.com/photos/27893063/pexels-photo-27893063.jpeg",
+      "photographer": "hson",
+      "source": "https://www.pexels.com/photo/27893063/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/27893063.jpg"
+    },
+    {
+      "id": "4622205",
+      "category": "sewing",
+      "url": "https://images.pexels.com/photos/4622205/pexels-photo-4622205.jpeg",
+      "photographer": "cottonbro",
+      "source": "https://www.pexels.com/photo/4622205/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/4622205.jpg"
+    },
+    {
+      "id": "7256913",
+      "category": "sewing",
+      "url": "https://images.pexels.com/photos/7256913/pexels-photo-7256913.jpeg",
+      "photographer": "anete lusina",
+      "source": "https://www.pexels.com/photo/7256913/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/7256913.jpg"
+    },
+    {
+      "id": "37232407",
+      "category": "sewing",
+      "url": "https://images.pexels.com/photos/37232407/pexels-photo-37232407.jpeg",
+      "photographer": "rakhmatsuwandi",
+      "source": "https://www.pexels.com/photo/37232407/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/37232407.jpg"
+    },
+    {
+      "id": "3984840",
+      "category": "sewing",
+      "url": "https://images.pexels.com/photos/3984840/pexels-photo-3984840.jpeg",
+      "photographer": "gustavo fring",
+      "source": "https://www.pexels.com/photo/3984840/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/3984840.jpg"
+    },
+    {
+      "id": "6876052",
+      "category": "sewing",
+      "url": "https://images.pexels.com/photos/6876052/pexels-photo-6876052.jpeg",
+      "photographer": "sarapuigsanz",
+      "source": "https://www.pexels.com/photo/6876052/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/6876052.jpg"
+    },
+    {
+      "id": "4622216",
+      "category": "sewing",
+      "url": "https://images.pexels.com/photos/4622216/pexels-photo-4622216.jpeg",
+      "photographer": "cottonbro",
+      "source": "https://www.pexels.com/photo/4622216/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/4622216.jpg"
+    },
+    {
+      "id": "36731265",
+      "category": "sewing",
+      "url": "https://images.pexels.com/photos/36731265/pexels-photo-36731265.jpeg",
+      "photographer": "silverkblack",
+      "source": "https://www.pexels.com/photo/36731265/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/36731265.jpg"
+    },
+    {
+      "id": "38948867",
+      "category": "sewing",
+      "url": "https://images.pexels.com/photos/38948867/pexels-photo-38948867.png",
+      "photographer": "phat tr ng",
+      "source": "https://www.pexels.com/photo/38948867/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/38948867.jpg"
+    },
+    {
+      "id": "7778041",
+      "category": "sewing",
+      "url": "https://images.pexels.com/photos/7778041/pexels-photo-7778041.jpeg",
+      "photographer": "ron lach",
+      "source": "https://www.pexels.com/photo/7778041/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/7778041.jpg"
+    },
+    {
+      "id": "33656709",
+      "category": "sewing",
+      "url": "https://images.pexels.com/photos/33656709/pexels-photo-33656709.jpeg",
+      "photographer": "tahir",
+      "source": "https://www.pexels.com/photo/33656709/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/33656709.jpg"
+    },
+    {
+      "id": "7256922",
+      "category": "sewing",
+      "url": "https://images.pexels.com/photos/7256922/pexels-photo-7256922.jpeg",
+      "photographer": "anete lusina",
+      "source": "https://www.pexels.com/photo/7256922/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/7256922.jpg"
+    },
+    {
+      "id": "33187300",
+      "category": "sewing",
+      "url": "https://images.pexels.com/photos/33187300/pexels-photo-33187300.jpeg",
+      "photographer": "guney kayra acer",
+      "source": "https://www.pexels.com/photo/33187300/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/33187300.jpg"
+    },
+    {
+      "id": "29210056",
+      "category": "sewing",
+      "url": "https://images.pexels.com/photos/29210056/pexels-photo-29210056.jpeg",
+      "photographer": "sejio402",
+      "source": "https://www.pexels.com/photo/29210056/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/29210056.jpg"
+    },
+    {
+      "id": "33706427",
+      "category": "sewing",
+      "url": "https://images.pexels.com/photos/33706427/pexels-photo-33706427.jpeg",
+      "photographer": "jahratreza",
+      "source": "https://www.pexels.com/photo/33706427/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/33706427.jpg"
+    },
+    {
+      "id": "14928074",
+      "category": "india",
+      "url": "https://images.pexels.com/photos/14928074/pexels-photo-14928074.jpeg",
+      "photographer": "rina islam",
+      "source": "https://www.pexels.com/photo/14928074/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/14928074.jpg"
+    },
+    {
+      "id": "7920188",
+      "category": "india",
+      "url": "https://images.pexels.com/photos/7920188/pexels-photo-7920188.jpeg",
+      "photographer": "sakshi patwa",
+      "source": "https://www.pexels.com/photo/7920188/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/7920188.jpg"
+    },
+    {
+      "id": "34039340",
+      "category": "india",
+      "url": "https://images.pexels.com/photos/34039340/pexels-photo-34039340.jpeg",
+      "photographer": "ekam juneja",
+      "source": "https://www.pexels.com/photo/34039340/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/34039340.jpg"
+    },
+    {
+      "id": "1846014",
+      "category": "india",
+      "url": "https://images.pexels.com/photos/1846014/pexels-photo-1846014.jpeg",
+      "photographer": "panditwiguna",
+      "source": "https://www.pexels.com/photo/1846014/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/1846014.jpg"
+    },
+    {
+      "id": "28316406",
+      "category": "india",
+      "url": "https://images.pexels.com/photos/28316406/pexels-photo-28316406.jpeg",
+      "photographer": "stardustmultimedia",
+      "source": "https://www.pexels.com/photo/28316406/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/28316406.jpg"
+    },
+    {
+      "id": "30004204",
+      "category": "india",
+      "url": "https://images.pexels.com/photos/30004204/pexels-photo-30004204.jpeg",
+      "photographer": "ab_h_i s_h_ek_09",
+      "source": "https://www.pexels.com/photo/30004204/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/30004204.jpg"
+    },
+    {
+      "id": "37054322",
+      "category": "india",
+      "url": "https://images.pexels.com/photos/37054322/pexels-photo-37054322.jpeg",
+      "photographer": "satyampixels",
+      "source": "https://www.pexels.com/photo/37054322/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/37054322.jpg"
+    },
+    {
+      "id": "39559946",
+      "category": "india",
+      "url": "https://images.pexels.com/photos/39559946/pexels-photo-39559946.jpeg",
+      "photographer": "manish m",
+      "source": "https://www.pexels.com/photo/39559946/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/39559946.jpg"
+    },
+    {
+      "id": "20161456",
+      "category": "india",
+      "url": "https://images.pexels.com/photos/20161456/pexels-photo-20161456.jpeg",
+      "photographer": "kolkata models",
+      "source": "https://www.pexels.com/photo/20161456/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/20161456.jpg"
+    },
+    {
+      "id": "8751532",
+      "category": "india",
+      "url": "https://images.pexels.com/photos/8751532/pexels-photo-8751532.jpeg",
+      "photographer": "anastasia shuraeva",
+      "source": "https://www.pexels.com/photo/8751532/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/8751532.jpg"
+    },
+    {
+      "id": "14205210",
+      "category": "india",
+      "url": "https://images.pexels.com/photos/14205210/pexels-photo-14205210.jpeg",
+      "photographer": "vishalcreation",
+      "source": "https://www.pexels.com/photo/14205210/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/14205210.jpg"
+    },
+    {
+      "id": "39857905",
+      "category": "india",
+      "url": "https://images.pexels.com/photos/39857905/pexels-photo-39857905.jpeg",
+      "photographer": "shootsaga",
+      "source": "https://www.pexels.com/photo/39857905/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/39857905.jpg"
+    },
+    {
+      "id": "4427652",
+      "category": "india",
+      "url": "https://images.pexels.com/photos/4427652/pexels-photo-4427652.jpeg",
+      "photographer": "cottonbro",
+      "source": "https://www.pexels.com/photo/4427652/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/4427652.jpg"
+    },
+    {
+      "id": "33754389",
+      "category": "india",
+      "url": "https://images.pexels.com/photos/33754389/pexels-photo-33754389.jpeg",
+      "photographer": "kareena joseph",
+      "source": "https://www.pexels.com/photo/33754389/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/33754389.jpg"
+    },
+    {
+      "id": "20957555",
+      "category": "india",
+      "url": "https://images.pexels.com/photos/20957555/pexels-photo-20957555.jpeg",
+      "photographer": "kolkata models",
+      "source": "https://www.pexels.com/photo/20957555/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/20957555.jpg"
+    },
+    {
+      "id": "38850343",
+      "category": "india",
+      "url": "https://images.pexels.com/photos/38850343/pexels-photo-38850343.jpeg",
+      "photographer": "aa s photography",
+      "source": "https://www.pexels.com/photo/38850343/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/38850343.jpg"
+    },
+    {
+      "id": "7176438",
+      "category": "india",
+      "url": "https://images.pexels.com/photos/7176438/pexels-photo-7176438.jpeg",
+      "photographer": "a darmel",
+      "source": "https://www.pexels.com/photo/7176438/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/7176438.jpg"
+    },
+    {
+      "id": "17876038",
+      "category": "india",
+      "url": "https://images.pexels.com/photos/17876038/pexels-photo-17876038.jpeg",
+      "photographer": "sabir khan shourov",
+      "source": "https://www.pexels.com/photo/17876038/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/17876038.jpg"
+    },
+    {
+      "id": "28058186",
+      "category": "india",
+      "url": "https://images.pexels.com/photos/28058186/pexels-photo-28058186.jpeg",
+      "photographer": "dream_ makkerzz",
+      "source": "https://www.pexels.com/photo/28058186/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/28058186.jpg"
+    },
+    {
+      "id": "7176430",
+      "category": "india",
+      "url": "https://images.pexels.com/photos/7176430/pexels-photo-7176430.jpeg",
+      "photographer": "a darmel",
+      "source": "https://www.pexels.com/photo/7176430/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/7176430.jpg"
+    },
+    {
+      "id": "19600007",
+      "category": "india",
+      "url": "https://images.pexels.com/photos/19600007/pexels-photo-19600007.jpeg",
+      "photographer": "harshath khan",
+      "source": "https://www.pexels.com/photo/19600007/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/19600007.jpg"
+    },
+    {
+      "id": "35108817",
+      "category": "india",
+      "url": "https://images.pexels.com/photos/35108817/pexels-photo-35108817.jpeg",
+      "photographer": "miltonphotography",
+      "source": "https://www.pexels.com/photo/35108817/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/35108817.jpg"
+    },
+    {
+      "id": "9340638",
+      "category": "japan",
+      "url": "https://images.pexels.com/photos/9340638/pexels-photo-9340638.jpeg",
+      "photographer": "labskiii",
+      "source": "https://www.pexels.com/photo/9340638/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/9340638.jpg"
+    },
+    {
+      "id": "19060366",
+      "category": "japan",
+      "url": "https://images.pexels.com/photos/19060366/pexels-photo-19060366.jpeg",
+      "photographer": "rocharles pidal",
+      "source": "https://www.pexels.com/photo/19060366/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/19060366.jpg"
+    },
+    {
+      "id": "20435171",
+      "category": "japan",
+      "url": "https://images.pexels.com/photos/20435171/pexels-photo-20435171.jpeg",
+      "photographer": "chente8888",
+      "source": "https://www.pexels.com/photo/20435171/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/20435171.jpg"
+    },
+    {
+      "id": "31305389",
+      "category": "japan",
+      "url": "https://images.pexels.com/photos/31305389/pexels-photo-31305389.jpeg",
+      "photographer": "shakir1317",
+      "source": "https://www.pexels.com/photo/31305389/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/31305389.jpg"
+    },
+    {
+      "id": "32920732",
+      "category": "japan",
+      "url": "https://images.pexels.com/photos/32920732/pexels-photo-32920732.jpeg",
+      "photographer": "felix young",
+      "source": "https://www.pexels.com/photo/32920732/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/32920732.jpg"
+    },
+    {
+      "id": "27315522",
+      "category": "japan",
+      "url": "https://images.pexels.com/photos/27315522/pexels-photo-27315522.jpeg",
+      "photographer": "jonathan valdes",
+      "source": "https://www.pexels.com/photo/27315522/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/27315522.jpg"
+    },
+    {
+      "id": "27601335",
+      "category": "japan",
+      "url": "https://images.pexels.com/photos/27601335/pexels-photo-27601335.jpeg",
+      "photographer": "jakof br",
+      "source": "https://www.pexels.com/photo/27601335/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/27601335.jpg"
+    },
+    {
+      "id": "5745777",
+      "category": "japan",
+      "url": "https://images.pexels.com/photos/5745777/pexels-photo-5745777.jpeg",
+      "photographer": "ryutaro",
+      "source": "https://www.pexels.com/photo/5745777/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/5745777.jpg"
+    },
+    {
+      "id": "11508658",
+      "category": "japan",
+      "url": "https://images.pexels.com/photos/11508658/pexels-photo-11508658.jpeg",
+      "photographer": "carla nunez",
+      "source": "https://www.pexels.com/photo/11508658/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/11508658.jpg"
+    },
+    {
+      "id": "27520205",
+      "category": "japan",
+      "url": "https://images.pexels.com/photos/27520205/pexels-photo-27520205.jpeg",
+      "photographer": "andrea roman",
+      "source": "https://www.pexels.com/photo/27520205/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/27520205.jpg"
+    },
+    {
+      "id": "10011219",
+      "category": "japan",
+      "url": "https://images.pexels.com/photos/10011219/pexels-photo-10011219.jpeg",
+      "photographer": "mh92",
+      "source": "https://www.pexels.com/photo/10011219/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/10011219.jpg"
+    },
+    {
+      "id": "32946565",
+      "category": "japan",
+      "url": "https://images.pexels.com/photos/32946565/pexels-photo-32946565.jpeg",
+      "photographer": "felix young",
+      "source": "https://www.pexels.com/photo/32946565/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/32946565.jpg"
+    },
+    {
+      "id": "35153051",
+      "category": "japan",
+      "url": "https://images.pexels.com/photos/35153051/pexels-photo-35153051.jpeg",
+      "photographer": "valeri mak",
+      "source": "https://www.pexels.com/photo/35153051/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/35153051.jpg"
+    },
+    {
+      "id": "10211119",
+      "category": "japan",
+      "url": "https://images.pexels.com/photos/10211119/pexels-photo-10211119.jpeg",
+      "photographer": "nikita grishin",
+      "source": "https://www.pexels.com/photo/10211119/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/10211119.jpg"
+    },
+    {
+      "id": "12809241",
+      "category": "japan",
+      "url": "https://images.pexels.com/photos/12809241/pexels-photo-12809241.jpeg",
+      "photographer": "lana",
+      "source": "https://www.pexels.com/photo/12809241/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/12809241.jpg"
+    },
+    {
+      "id": "27467505",
+      "category": "japan",
+      "url": "https://images.pexels.com/photos/27467505/pexels-photo-27467505.jpeg",
+      "photographer": "thefabricamike",
+      "source": "https://www.pexels.com/photo/27467505/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/27467505.jpg"
+    },
+    {
+      "id": "37604279",
+      "category": "japan",
+      "url": "https://images.pexels.com/photos/37604279/pexels-photo-37604279.jpeg",
+      "photographer": "iban lopez luna",
+      "source": "https://www.pexels.com/photo/37604279/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/37604279.jpg"
+    },
+    {
+      "id": "6716548",
+      "category": "japan",
+      "url": "https://images.pexels.com/photos/6716548/pexels-photo-6716548.jpeg",
+      "photographer": "labskiii",
+      "source": "https://www.pexels.com/photo/6716548/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/6716548.jpg"
+    },
+    {
+      "id": "30961871",
+      "category": "japan",
+      "url": "https://images.pexels.com/photos/30961871/pexels-photo-30961871.jpeg",
+      "photographer": "federicoabisphotography",
+      "source": "https://www.pexels.com/photo/30961871/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/30961871.jpg"
+    },
+    {
+      "id": "34954074",
+      "category": "japan",
+      "url": "https://images.pexels.com/photos/34954074/pexels-photo-34954074.jpeg",
+      "photographer": "ismail othman",
+      "source": "https://www.pexels.com/photo/34954074/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/34954074.jpg"
+    },
+    {
+      "id": "8640763",
+      "category": "japan",
+      "url": "https://images.pexels.com/photos/8640763/pexels-photo-8640763.jpeg",
+      "photographer": "kadaaran",
+      "source": "https://www.pexels.com/photo/8640763/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/8640763.jpg"
+    },
+    {
+      "id": "33128243",
+      "category": "japan",
+      "url": "https://images.pexels.com/photos/33128243/pexels-photo-33128243.jpeg",
+      "photographer": "geoffrey currie",
+      "source": "https://www.pexels.com/photo/33128243/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/33128243.jpg"
+    },
+    {
+      "id": "37989650",
+      "category": "japan",
+      "url": "https://images.pexels.com/photos/37989650/pexels-photo-37989650.jpeg",
+      "photographer": "emanuele ricciardi",
+      "source": "https://www.pexels.com/photo/37989650/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/37989650.jpg"
+    },
+    {
+      "id": "7958022",
+      "category": "japan",
+      "url": "https://images.pexels.com/photos/7958022/pexels-photo-7958022.jpeg",
+      "photographer": "yaroslav shuraev",
+      "source": "https://www.pexels.com/photo/7958022/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/7958022.jpg"
+    },
+    {
+      "id": "6850486",
+      "category": "textiles",
+      "url": "https://images.pexels.com/photos/6850486/pexels-photo-6850486.jpeg",
+      "photographer": "teona swift",
+      "source": "https://www.pexels.com/photo/6850486/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/6850486.jpg"
+    },
+    {
+      "id": "13368318",
+      "category": "textiles",
+      "url": "https://images.pexels.com/photos/13368318/pexels-photo-13368318.jpeg",
+      "photographer": "lana kravchenko",
+      "source": "https://www.pexels.com/photo/13368318/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/13368318.jpg"
+    },
+    {
+      "id": "11585380",
+      "category": "textiles",
+      "url": "https://images.pexels.com/photos/11585380/pexels-photo-11585380.jpeg",
+      "photographer": "jonast",
+      "source": "https://www.pexels.com/photo/11585380/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/11585380.jpg"
+    },
+    {
+      "id": "7641151",
+      "category": "textiles",
+      "url": "https://images.pexels.com/photos/7641151/pexels-photo-7641151.jpeg",
+      "photographer": "eva bronzini",
+      "source": "https://www.pexels.com/photo/7641151/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/7641151.jpg"
+    },
+    {
+      "id": "11255289",
+      "category": "textiles",
+      "url": "https://images.pexels.com/photos/11255289/pexels-photo-11255289.jpeg",
+      "photographer": "seamlesstextures",
+      "source": "https://www.pexels.com/photo/11255289/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/11255289.jpg"
+    },
+    {
+      "id": "34191411",
+      "category": "textiles",
+      "url": "https://images.pexels.com/photos/34191411/pexels-photo-34191411.jpeg",
+      "photographer": "kubrauc",
+      "source": "https://www.pexels.com/photo/34191411/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/34191411.jpg"
+    },
+    {
+      "id": "19026106",
+      "category": "textiles",
+      "url": "https://images.pexels.com/photos/19026106/pexels-photo-19026106.jpeg",
+      "photographer": "fatih guney",
+      "source": "https://www.pexels.com/photo/19026106/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/19026106.jpg"
+    },
+    {
+      "id": "4863009",
+      "category": "textiles",
+      "url": "https://images.pexels.com/photos/4863009/pexels-photo-4863009.jpeg",
+      "photographer": "karola g",
+      "source": "https://www.pexels.com/photo/4863009/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/4863009.jpg"
+    },
+    {
+      "id": "5789582",
+      "category": "textiles",
+      "url": "https://images.pexels.com/photos/5789582/pexels-photo-5789582.jpeg",
+      "photographer": "pavel danilyuk",
+      "source": "https://www.pexels.com/photo/5789582/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/5789582.jpg"
+    },
+    {
+      "id": "31853353",
+      "category": "textiles",
+      "url": "https://images.pexels.com/photos/31853353/pexels-photo-31853353.jpeg",
+      "photographer": "bertellifotografia",
+      "source": "https://www.pexels.com/photo/31853353/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/31853353.jpg"
+    },
+    {
+      "id": "34100445",
+      "category": "textiles",
+      "url": "https://images.pexels.com/photos/34100445/pexels-photo-34100445.jpeg",
+      "photographer": "tomfisk",
+      "source": "https://www.pexels.com/photo/34100445/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/34100445.jpg"
+    },
+    {
+      "id": "6275967",
+      "category": "textiles",
+      "url": "https://images.pexels.com/photos/6275967/pexels-photo-6275967.jpeg",
+      "photographer": "karola g",
+      "source": "https://www.pexels.com/photo/6275967/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/6275967.jpg"
+    },
+    {
+      "id": "6276056",
+      "category": "textiles",
+      "url": "https://images.pexels.com/photos/6276056/pexels-photo-6276056.jpeg",
+      "photographer": "karola g",
+      "source": "https://www.pexels.com/photo/6276056/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/6276056.jpg"
+    },
+    {
+      "id": "38951975",
+      "category": "textiles",
+      "url": "https://images.pexels.com/photos/38951975/pexels-photo-38951975.jpeg",
+      "photographer": "ivett",
+      "source": "https://www.pexels.com/photo/38951975/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/38951975.jpg"
+    },
+    {
+      "id": "15949827",
+      "category": "textiles",
+      "url": "https://images.pexels.com/photos/15949827/pexels-photo-15949827.jpeg",
+      "photographer": "budget bizar",
+      "source": "https://www.pexels.com/photo/15949827/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/15949827.jpg"
+    },
+    {
+      "id": "30243795",
+      "category": "textiles",
+      "url": "https://images.pexels.com/photos/30243795/pexels-photo-30243795.jpeg",
+      "photographer": "jose manuel ramirez brenis",
+      "source": "https://www.pexels.com/photo/30243795/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/30243795.jpg"
+    },
+    {
+      "id": "7641027",
+      "category": "textiles",
+      "url": "https://images.pexels.com/photos/7641027/pexels-photo-7641027.jpeg",
+      "photographer": "eva bronzini",
+      "source": "https://www.pexels.com/photo/7641027/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/7641027.jpg"
+    },
+    {
+      "id": "7138974",
+      "category": "textiles",
+      "url": "https://images.pexels.com/photos/7138974/pexels-photo-7138974.jpeg",
+      "photographer": "filirovska",
+      "source": "https://www.pexels.com/photo/7138974/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/7138974.jpg"
+    },
+    {
+      "id": "6487380",
+      "category": "textiles",
+      "url": "https://images.pexels.com/photos/6487380/pexels-photo-6487380.jpeg",
+      "photographer": "mohmed mahmoud",
+      "source": "https://www.pexels.com/photo/6487380/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/6487380.jpg"
+    },
+    {
+      "id": "36656824",
+      "category": "textiles",
+      "url": "https://images.pexels.com/photos/36656824/pexels-photo-36656824.jpeg",
+      "photographer": "don horror",
+      "source": "https://www.pexels.com/photo/36656824/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/36656824.jpg"
+    },
+    {
+      "id": "6764920",
+      "category": "textiles",
+      "url": "https://images.pexels.com/photos/6764920/pexels-photo-6764920.jpeg",
+      "photographer": "tima miroshnichenko",
+      "source": "https://www.pexels.com/photo/6764920/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/6764920.jpg"
+    },
+    {
+      "id": "236748",
+      "category": "textiles",
+      "url": "https://images.pexels.com/photos/236748/pexels-photo-236748.jpeg",
+      "photographer": "pixabay",
+      "source": "https://www.pexels.com/photo/236748/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/236748.jpg"
+    },
+    {
+      "id": "7498815",
+      "category": "textiles",
+      "url": "https://images.pexels.com/photos/7498815/pexels-photo-7498815.jpeg",
+      "photographer": "mtyutina",
+      "source": "https://www.pexels.com/photo/7498815/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/7498815.jpg"
+    },
+    {
+      "id": "5504775",
+      "category": "textiles",
+      "url": "https://images.pexels.com/photos/5504775/pexels-photo-5504775.jpeg",
+      "photographer": "mike van schoonderwalt",
+      "source": "https://www.pexels.com/photo/5504775/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/editorial/5504775.jpg"
+    },
+    {
+      "id": "35153051",
+      "category": "japan-hero",
+      "url": "https://images.pexels.com/photos/35153051/pexels-photo-35153051.jpeg",
+      "photographer": "valeri mak",
+      "source": "https://www.pexels.com/photo/35153051/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/japan-fashion.jpg"
+    },
+    {
+      "id": "15995522",
+      "category": "high-resolution tailoring",
+      "url": "https://images.pexels.com/photos/15995522/pexels-photo-15995522.jpeg",
+      "source": "https://www.pexels.com/photo/15995522/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/portrait.jpg"
+    },
+    {
+      "id": "9853292",
+      "category": "high-resolution tailoring",
+      "url": "https://images.pexels.com/photos/9853292/pexels-photo-9853292.jpeg",
+      "source": "https://www.pexels.com/photo/9853292/",
+      "license": "https://www.pexels.com/license/",
+      "local": "/assets/atelier.jpg"
+    }
+  ],
+  "license": "https://www.pexels.com/license/",
+  "highResolution": [
+    {
+      "id": "19600007",
+      "theme": "South Indian silk heritage",
+      "alt": "A woman in a purple silk sari with a blue blouse and jasmine flowers",
+      "roles": [
+        "archive"
+      ],
+      "local": "/assets/culture/indian-silk-4k.jpg",
+      "mobile": "/assets/culture/indian-silk-mobile.webp",
+      "width": 3840,
+      "height": 5760,
+      "sourceWidth": 3840,
+      "sourceHeight": 5760,
+      "upscaled": false,
+      "photographer": "harshath khan",
+      "source": "https://www.pexels.com/photo/19600007/",
+      "download": "https://images.pexels.com/photos/19600007/pexels-photo-19600007.jpeg",
+      "license": "https://www.pexels.com/license/",
+      "optimizedBytes": 1461524
+    },
+    {
+      "id": "37054322",
+      "theme": "Indian ivory and gold",
+      "alt": "A woman wearing an ivory and gold sari beside an old tree",
+      "roles": [
+        "archive"
+      ],
+      "local": "/assets/culture/ivory-gold-4k.jpg",
+      "mobile": "/assets/culture/ivory-gold-mobile.webp",
+      "width": 3840,
+      "height": 5760,
+      "sourceWidth": 4000,
+      "sourceHeight": 6000,
+      "upscaled": false,
+      "photographer": "satyampixels",
+      "source": "https://www.pexels.com/photo/37054322/",
+      "download": "https://images.pexels.com/photos/37054322/pexels-photo-37054322.jpeg",
+      "license": "https://www.pexels.com/license/",
+      "optimizedBytes": 3160827
+    },
+    {
+      "id": "39857905",
+      "theme": "Contemporary Indian heritage",
+      "alt": "A woman wearing a black sari in an ornate Indian courtyard",
+      "roles": [
+        "archive"
+      ],
+      "local": "/assets/culture/heritage-black-4k.jpg",
+      "mobile": "/assets/culture/heritage-black-mobile.webp",
+      "width": 3840,
+      "height": 5760,
+      "sourceWidth": 4672,
+      "sourceHeight": 7008,
+      "upscaled": false,
+      "photographer": "shootsaga",
+      "source": "https://www.pexels.com/photo/39857905/",
+      "download": "https://images.pexels.com/photos/39857905/pexels-photo-39857905.jpeg",
+      "license": "https://www.pexels.com/license/",
+      "optimizedBytes": 3122941
+    },
+    {
+      "id": "29222239",
+      "theme": "Traditional tailoring craft",
+      "alt": "A tailor guiding fabric through a vintage hand-operated sewing machine",
+      "roles": [
+        "story"
+      ],
+      "local": "/assets/culture/tailor-atelier-4k.jpg",
+      "mobile": "/assets/culture/tailor-atelier-mobile.webp",
+      "width": 3840,
+      "height": 2560,
+      "sourceWidth": 5184,
+      "sourceHeight": 3456,
+      "upscaled": false,
+      "photographer": "hellram",
+      "source": "https://www.pexels.com/photo/29222239/",
+      "download": "https://images.pexels.com/photos/29222239/pexels-photo-29222239.jpeg",
+      "license": "https://www.pexels.com/license/",
+      "optimizedBytes": 1697522
+    },
+    {
+      "id": "36883230",
+      "theme": "The golden thread",
+      "alt": "A vintage sewing machine needle illuminated by warm golden light",
+      "roles": [
+        "archive"
+      ],
+      "local": "/assets/culture/sewing-gold-4k.jpg",
+      "mobile": "/assets/culture/sewing-gold-mobile.webp",
+      "width": 3840,
+      "height": 2560,
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "upscaled": false,
+      "photographer": "andranik paradyan",
+      "source": "https://www.pexels.com/photo/36883230/",
+      "download": "https://images.pexels.com/photos/36883230/pexels-photo-36883230.jpeg",
+      "license": "https://www.pexels.com/license/",
+      "optimizedBytes": 843855
+    },
+    {
+      "id": "15995522",
+      "theme": "A tribute to traditional tailors",
+      "alt": "A traditional Indian tailor at work beside his vintage sewing machine",
+      "roles": [
+        "story portrait"
+      ],
+      "local": "/assets/culture/tailor-portrait-4k.jpg",
+      "mobile": "/assets/culture/tailor-portrait-mobile.webp",
+      "width": 3840,
+      "height": 2560,
+      "sourceWidth": 5653,
+      "sourceHeight": 3769,
+      "upscaled": false,
+      "source": "https://www.pexels.com/photo/15995522/",
+      "download": "https://images.pexels.com/photos/15995522/pexels-photo-15995522.jpeg",
+      "license": "https://www.pexels.com/license/",
+      "optimizedBytes": 1424733
+    },
+    {
+      "id": "9853292",
+      "theme": "International atelier accent",
+      "alt": "A dressmaker carefully adjusting a dress on a woman",
+      "roles": [
+        "small atelier accent"
+      ],
+      "local": "/assets/culture/dressmaking-4k.jpg",
+      "mobile": "/assets/culture/dressmaking-mobile.webp",
+      "width": 3840,
+      "height": 2560,
+      "sourceWidth": 6016,
+      "sourceHeight": 4011,
+      "upscaled": false,
+      "source": "https://www.pexels.com/photo/9853292/",
+      "download": "https://images.pexels.com/photos/9853292/pexels-photo-9853292.jpeg",
+      "license": "https://www.pexels.com/license/",
+      "optimizedBytes": 1384168
+    },
+    {
+      "id": "38876958",
+      "theme": "Indian modern occasionwear",
+      "local": "/assets/distinct/lehenga-4k.jpg",
+      "mobile": "/assets/distinct/lehenga-mobile.webp",
+      "width": 3190,
+      "height": 4587,
+      "sourceWidth": 3190,
+      "sourceHeight": 4587,
+      "upscaled": false,
+      "source": "https://www.pexels.com/photo/elegant-indian-woman-in-traditional-lehenga-dress-38876958/",
+      "license": "https://www.pexels.com/license/",
+      "roles": [
+        "home"
+      ]
+    },
+    {
+      "id": "13715660",
+      "theme": "Sculptural eveningwear",
+      "local": "/assets/distinct/evening-4k.jpg",
+      "mobile": "/assets/distinct/evening-mobile.webp",
+      "width": 3840,
+      "height": 4800,
+      "sourceWidth": 4352,
+      "sourceHeight": 5440,
+      "upscaled": false,
+      "source": "https://www.pexels.com/photo/woman-in-evening-dress-posing-in-studio-13715660/",
+      "license": "https://www.pexels.com/license/",
+      "roles": [
+        "products"
+      ]
+    },
+    {
+      "id": "8886950",
+      "theme": "Indian embellishment",
+      "local": "/assets/distinct/embroidery-4k.jpg",
+      "mobile": "/assets/distinct/embroidery-mobile.webp",
+      "width": 3840,
+      "height": 2560,
+      "sourceWidth": 5040,
+      "sourceHeight": 3360,
+      "upscaled": false,
+      "source": "https://www.pexels.com/photo/a-person-holding-a-red-embroidered-fabric-8886950/",
+      "license": "https://www.pexels.com/license/",
+      "roles": [
+        "enquiry"
+      ]
+    },
+    {
+      "id": "7202800",
+      "theme": "Contemporary womenswear tailoring",
+      "local": "/assets/distinct/tailoring-4k.jpg",
+      "mobile": "/assets/distinct/tailoring-mobile.webp",
+      "width": 3840,
+      "height": 5760,
+      "sourceWidth": 3906,
+      "sourceHeight": 5859,
+      "upscaled": false,
+      "source": "https://www.pexels.com/photo/7202800/",
+      "license": "https://www.pexels.com/license/",
+      "roles": [
+        "gallery"
+      ]
+    },
+    {
+      "id": "34191411",
+      "theme": "Patterned textiles",
+      "local": "/assets/distinct/textile-4k.jpg",
+      "mobile": "/assets/distinct/textile-mobile.webp",
+      "width": 2597,
+      "height": 4977,
+      "sourceWidth": 2597,
+      "sourceHeight": 4977,
+      "upscaled": false,
+      "source": "https://www.pexels.com/photo/34191411/",
+      "license": "https://www.pexels.com/license/",
+      "roles": [
+        "gallery"
+      ]
+    }
+  ],
+  "highResolutionNote": "These photographs are editorial inspiration for fashion and craft, not depictions of FIDA products or its workforce. Originals have at least 3840 pixels of source width. Resized without enlargement. Portrait photographs retain their native aspect ratio and are not advertised as 16:9 UHD files.",
+  "pageThemes": {
+    "home": {
+      "theme": "Indian modern occasionwear",
+      "image": "/assets/distinct/lehenga-4k.jpg"
+    },
+    "products": {
+      "theme": "Sculptural eveningwear",
+      "image": "/assets/distinct/evening-4k.jpg"
+    },
+    "enquiry": {
+      "theme": "Indian embellishment",
+      "image": "/assets/distinct/embroidery-4k.jpg"
+    },
+    "contact": {
+      "theme": "Indian saree weaving",
+      "image": "/assets/culture/saree-weaving-detail-4k.jpg"
+    },
+    "story": {
+      "theme": "Indian traditional tailoring",
+      "image": "/assets/culture/tailor-atelier-4k.jpg"
+    }
+  }
+}

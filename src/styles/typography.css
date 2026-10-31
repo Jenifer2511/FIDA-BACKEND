@@ -1,0 +1,247 @@
+/* FIDA: editorial headlines, clear reading text, and legible controls. */
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/fonts/playfair-display-latin-variable.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/fonts/playfair-display-latin-italic-variable.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 400 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter-latin-variable.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+:root {
+  --serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --sans: 'Inter', 'Segoe UI', Arial, sans-serif;
+  --type-body: 16px;
+  --type-small: 14px;
+  --type-label: 12px;
+}
+body {
+  font-family: var(--sans); font-size: var(--type-body); font-weight: 400;
+  line-height: 1.7; letter-spacing: 0; font-synthesis: none;
+}
+.site { --muted: #62574f; font-family: var(--sans); font-size: var(--type-body); }
+.site h1, .site h2, .site h3 {
+  font-family: var(--serif); font-weight: 500; font-optical-sizing: auto;
+  letter-spacing: -.025em; line-height: 1.16; text-wrap: balance;
+}
+.site h1 em, .site h2 em, .site h3 em { font-family: inherit; font-weight: 500; }
+
+/* Reading text no longer relies on the old 9–12px sizes. */
+.site .intro-copy, .site .unfold-detail p, .site .manifesto-note p,
+.site .world-heading > p:last-child, .site .craft-copy > p:not(.eyebrow),
+.site .story-prologue > p:last-child, .site .story-dedication p:not(.eyebrow),
+.site .story-origin p:not(.eyebrow), .site .destinations > p:last-child,
+.site .faq > p, .site .success-state p,
+.site .enquiry-content > .intro-copy, .site .contact-content > .intro-copy {
+  font-size: var(--type-body); font-weight: 400; line-height: 1.75;
+  letter-spacing: 0; text-wrap: pretty;
+}
+.site .story-origin p:not(.eyebrow), .site .story-dedication p:not(.eyebrow),
+.site .faq > p { max-width: 65ch; }
+.site .eyebrow, .site .section-heading .eyebrow, .site .footer-grid .eyebrow,
+.site .line-number, .site .home-films-label, .site .craft-caption,
+.site .visual-caption, .site .vertical-label {
+  font: 500 var(--type-label)/1.6 var(--sans); letter-spacing: .09em;
+}
+.site.page-enquiry .vertical-label { font: 500 var(--type-label)/1.6 var(--sans); letter-spacing: .07em; }
+
+/* Restrained navigation and comfortable action labels. */
+.site .header .desktop-nav { gap: clamp(20px, 2.2vw, 32px); }
+.site .header .desktop-nav a, .site .header .header-cta {
+  font: 500 13px/1.5 var(--sans); letter-spacing: .02em; text-transform: none;
+}
+.site .header .header-cta { gap: 14px; }
+.site .arrow-link, .site .button, .site .text-scroll,
+.site .contact-social a, .site .direct-line {
+  font-family: var(--sans); font-size: var(--type-small); font-weight: 500;
+  line-height: 1.5; letter-spacing: .015em; text-transform: none;
+}
+.site .arrow-link, .site .button { min-height: 48px; }
+.site .button { gap: 20px; }
+.site .mobile-nav > a {
+  font: 500 clamp(28px, 7vw, 36px)/1.35 var(--serif); letter-spacing: -.02em;
+}
+.site .mobile-nav small, .site .mobile-nav p { font: 400 var(--type-small)/1.6 var(--sans); }
+
+/* Photographic headlines: medium weight and room for italic overhangs. */
+.site .fida-film h1, .site .fida-film h2 {
+  font: 500 clamp(58px, 7.1vw, 116px)/1.1 var(--serif); letter-spacing: -.03em;
+}
+.site .fida-film h1 em, .site .fida-film h2 em, .site .scene-copy h1 em,
+.site .culture-heading h1 em, .site .paris-copy h1 em, .site .paris-copy h2 em { font-weight: 500; }
+.site .fida-film-arrival, .site .fida-film-finale { width: 54%; max-width: 780px; }
+.site .fida-film-description {
+  font: 400 var(--type-body)/1.7 var(--sans); letter-spacing: 0;
+  color: #fff5e4; max-width: 36ch;
+}
+.site .fida-film-eyebrow, .site .fida-film-interlude {
+  font: 500 var(--type-label)/1.6 var(--sans); letter-spacing: .1em;
+}
+.site .fida-film-interlude em {
+  font: italic 500 clamp(30px, 3.4vw, 54px)/1.25 var(--serif); letter-spacing: -.02em;
+}
+.site .fida-film-scroll, .site .fida-film-chapter, .site .fida-film-side-note {
+  font: 500 var(--type-label)/1.6 var(--sans); letter-spacing: .05em;
+}
+.site .fida-film-chapter { min-width: 0; }
+.site .fida-film-collection { font: 500 var(--type-small)/1.5 var(--sans); letter-spacing: 0; }
+.site .fida-film-watermark { font-weight: 400; }
+.site .scene-copy h1, .site .culture-heading h1, .site .paris-copy h1, .site .paris-copy h2 {
+  font-family: var(--serif); font-size: clamp(52px, 6.5vw, 104px); font-weight: 500;
+  line-height: 1.14; letter-spacing: -.025em; text-shadow: 0 2px 16px #1c0e1359;
+}
+.site .scene-products .scene-copy h1, .site .scene-story .scene-copy h1 {
+  font-size: clamp(48px, 5.5vw, 88px);
+}
+.site .scene-word-mask { padding: .12em .08em; margin: -.12em -.08em; }
+.site .scene-eyebrow, .site .culture-eyebrow {
+  font: 500 var(--type-label)/1.6 var(--sans); letter-spacing: .09em; color: #fff0d5;
+}
+.site .scene-description, .site .culture-description {
+  font: 400 var(--type-body)/1.7 var(--sans); letter-spacing: 0; max-width: 38ch; color: #fff6e9;
+}
+.site .scene-bottom > span:first-child, .site .culture-bottom, .site .culture-scroll-cue,
+.site .culture-position, .site .culture-country, .site .contact-countries {
+  font: 500 var(--type-label)/1.6 var(--sans); letter-spacing: .04em;
+}
+.site .scene-bottom > a, .site .culture-bottom > a { font: 500 var(--type-small)/1.5 var(--sans); }
+.site .look-card h2 { font: 500 clamp(18px, 1.8vw, 24px)/1.35 var(--sans); letter-spacing: -.015em; }
+.site .look-card > div p { font: 500 11px/1.5 var(--sans); letter-spacing: .05em; }
+.site .contact-hello { font-weight: 400; letter-spacing: .02em; }
+.site .craft-detail figcaption { font: 500 10px/1.5 var(--sans); letter-spacing: .025em; }
+
+/* Clean product names and full category labels. */
+.site .product-caption { gap: 12px; align-items: flex-start; }
+.site .product-caption > div { min-width: 0; }
+.site .product-caption h3, .site .product-reveal .product-caption h3,
+.site .home-edit .product-caption h3 {
+  font: 500 clamp(19px, 1.6vw, 23px)/1.4 var(--sans); letter-spacing: -.02em;
+  text-wrap: pretty; overflow-wrap: anywhere;
+}
+.site .product-caption .eyebrow, .site .product-reveal .product-caption .eyebrow {
+  font: 500 var(--type-label)/1.5 var(--sans); letter-spacing: .06em; color: var(--muted);
+}
+.site .product-price, .site .product-reveal .product-price, .site .product-action,
+.site .collection-note, .site .collection-count { font: 400 var(--type-small)/1.6 var(--sans); letter-spacing: 0; }
+.site .home-category-links a, .site .full-collection .collection-category-filters button {
+  font: 500 var(--type-small)/1.5 var(--sans); letter-spacing: 0;
+}
+.site .full-collection .search-field input { font: 400 var(--type-body)/1.5 var(--sans); }
+
+.site .unfold-manifesto h2, .site .section-heading h2, .site .world-heading h2,
+.site .story-prologue h2, .site .story-dedication h2, .site .story-origin h2,
+.site .faq-section h2, .site .enquiry-form-heading, .site .contact-content-title {
+  font-size: clamp(38px, 4.8vw, 76px); line-height: 1.18; letter-spacing: -.025em;
+}
+.site .world-card h3 { font-size: clamp(28px, 3vw, 38px); }
+.site .world-card p { font: 400 var(--type-small)/1.5 var(--sans); letter-spacing: 0; }
+.site .craft-copy h2 { font-size: clamp(40px, 5vw, 78px); line-height: 1.18; }
+.site .destinations h2 { font-size: clamp(36px, 4.5vw, 68px); line-height: 1.2; }
+.site .destinations h2 span { font: 500 12px/1.6 var(--sans); letter-spacing: .04em; }
+
+/* Forms keep 16px inputs on desktop and mobile. */
+.site .enquiry-form label { font: 500 var(--type-small)/1.6 var(--sans); letter-spacing: 0; }
+.site .enquiry-form label small { font-size: 12px; font-weight: 400; }
+.site .enquiry-form input:not([type='checkbox']), .site .enquiry-form textarea, .site .enquiry-form select {
+  font: 400 var(--type-body)/1.6 var(--sans); min-width: 0; max-width: 100%;
+}
+.site .enquiry-form ::placeholder { color: var(--muted); opacity: 1; }
+.site .enquiry-form .consent, .site .enquiry-form .consent span, .site .form-privacy,
+.site .notice, .site .story-dedication small { font: 400 var(--type-small)/1.7 var(--sans); }
+.site .faq > button { font: 500 16px/1.6 var(--sans); gap: 20px; text-align: left; }
+.site .contact-links span { font: 500 12px/1.6 var(--sans); letter-spacing: .07em; }
+.site .contact-links p {
+  font: 400 clamp(16px, 1.8vw, 24px)/1.5 var(--sans); letter-spacing: -.015em; overflow-wrap: anywhere;
+}
+.site .contact-links a > div { min-width: 0; }
+.site .enquiry-visual-copy p, .site.page-enquiry .enquiry-visual-copy p,
+.site .contact-visual > p {
+  font: 500 clamp(28px, 3vw, 42px)/1.3 var(--serif); letter-spacing: -.02em;
+}
+.site .makers-caption h2 { font-weight: 500; line-height: 1.2; letter-spacing: -.025em; }
+.site .makers-caption .eyebrow, .site .makers-top, .site .makers-progress {
+  font: 500 12px/1.6 var(--sans); letter-spacing: .05em;
+}
+.site .makers-controls a, .site .makers-note, .site .makers-thanks > p:last-child {
+  font: 400 14px/1.6 var(--sans); letter-spacing: 0;
+}
+.site .makers-note { color: #d4c7b5; }
+.site .makers-controls { flex-wrap: wrap; }
+.site .footer-invite { font-weight: 500; letter-spacing: -.025em; }
+.site .footer-grid > div > a, .site .footer-grid > div > p:not(.footer-logo):not(.eyebrow) {
+  font: 400 var(--type-small)/1.75 var(--sans); overflow-wrap: anywhere;
+}
+.site .footer-bottom { font: 400 12px/1.6 var(--sans); }
+
+@media (max-width: 760px) {
+  .site .eyebrow, .site .section-heading .eyebrow { letter-spacing: .065em; }
+  .site .fida-film-arrival, .site .fida-film-finale { width: auto; max-width: none; bottom: 24%; }
+  .site .fida-film h1, .site .fida-film h2 {
+    font-size: clamp(42px, 11vw, 70px); line-height: 1.13; letter-spacing: -.025em;
+  }
+  .site .fida-film-eyebrow, .site .fida-film-interlude, .site .fida-film-chapter, .site .fida-film-scroll {
+    font-size: 11px; letter-spacing: .05em;
+  }
+  .site .fida-film-collection { font-size: 13px; gap: 12px; }
+  .site .fida-film-description { font-size: 16px; line-height: 1.65; max-width: 28ch; }
+  .site .fida-film-interlude em { font-size: clamp(28px, 7.5vw, 40px); }
+  .site .scene-copy h1, .site .scene-products .scene-copy h1, .site .scene-story .scene-copy h1,
+  .site .culture-heading h1, .site .paris-copy h1, .site .paris-copy h2 {
+    font-size: clamp(38px, 10.8vw, 64px); line-height: 1.18;
+  }
+  .site .scene-eyebrow, .site .culture-eyebrow { font-size: 11px; letter-spacing: .065em; margin-bottom: 16px; }
+  .site .scene-description, .site .culture-description { font-size: 16px; line-height: 1.65; margin-top: 20px; }
+  .site .scene-products .scene-description { margin-top: 12px; max-width: 30ch; }
+  .site .scene-bottom { gap: 12px; flex-wrap: wrap; }
+  .site .scene-bottom > span:first-child { font-size: 11px; max-width: 48%; gap: 8px; }
+  .site .scene-bottom > a { font-size: 13px; max-width: 47%; gap: 10px; margin-left: auto; }
+  .site .scene-progress { position: absolute; left: 0; right: 0; bottom: -10px; width: 100%; }
+  .site .contact-countries { font-size: 11px; letter-spacing: .02em; flex-wrap: wrap; }
+  .site .look-card h2 { font-size: 18px; }
+  .site .look-card > div p { font-size: 11px; }
+  .site .craft-detail figcaption { font-size: 10px; margin-top: 5px; }
+  .site .craft-detail img { height: calc(100% - 38px); }
+  .site .unfold-manifesto h2, .site .section-heading h2, .site .world-heading h2,
+  .site .story-prologue h2, .site .story-dedication h2, .site .story-origin h2,
+  .site .faq-section h2, .site .enquiry-form-heading, .site .contact-content-title,
+  .site.page-enquiry .faq-section h2, .site.page-story .story-prologue h2,
+  .site.page-story .story-dedication h2, .site.page-products .quote-band h2 {
+    font-size: clamp(34px, 9vw, 56px); line-height: 1.2;
+  }
+  .site .section-heading { flex-wrap: wrap; gap: 24px; }
+  .site .home-category-links a, .site .full-collection .collection-category-filters button { font-size: 14px; }
+  .site .collection-count { gap: 20px; font-size: 13px; }
+  .site .craft-copy { margin-right: 8vw; }
+  .site .craft-copy h2 { font-size: clamp(36px, 9.5vw, 58px); }
+  .site .destinations h2, .site.page-contact .destinations h2 { font-size: clamp(32px, 8.5vw, 48px); }
+  .site .contact-social { gap: 20px; flex-wrap: wrap; }
+  .site .contact-links p { font-size: 16px; }
+  .site .makers-top { font-size: 11px; letter-spacing: .025em; }
+  .site .makers-caption .eyebrow { font-size: 11px; }
+  .site .makers-progress { font-size: 11px; min-width: 80px; }
+  .site .makers-controls { gap: 8px 16px; justify-content: flex-end; }
+  .site .makers-controls a { font-size: 12px; }
+  .site .makers-note { font-size: 11px; }
+  .site .footer-grid { gap: 32px 24px; }
+  .site .footer-invite { font-size: clamp(34px, 9vw, 56px); line-height: 1.2; }
+  .site .footer-bottom { flex-wrap: wrap; gap: 12px; }
+}
+@media (max-height: 650px) and (min-width: 761px) {
+  .site .fida-film h1, .site .fida-film h2, .site .scene-copy h1,
+  .site .scene-products .scene-copy h1, .site .scene-story .scene-copy h1 {
+    font-size: clamp(36px, 9.5svh, 64px);
+  }
+  .site .fida-film-description, .site .scene-description { font-size: 14px; margin-top: 14px; }
+}
