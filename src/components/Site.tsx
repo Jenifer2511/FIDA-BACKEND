@@ -1373,9 +1373,8 @@ function Story() {
           </span>
 
           <small>
-            Portrait: a traditional tailor at work in India.
-            Editorial tribute imagery celebrates the craft; it does
-            not identify FIDA’s own workforce.
+            For every woman, a wardrobe that moves with her—thoughtful,
+            expressive, and entirely her own.
           </small>
         </div>
       </section>
