@@ -316,7 +316,7 @@ function Footer() {
           <p className="eyebrow">FIND OUR WORLD</p>
 
           <p>
-            Salem, Tamil Nadu
+            Tamil Nadu
             <br />
             India
           </p>
