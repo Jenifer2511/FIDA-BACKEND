@@ -311,6 +311,15 @@ function Footer() {
             Instagram
             <ArrowUpRight size={12} aria-hidden="true" />
           </a>
+
+          <a
+            href="https://www.facebook.com/fidafashions.global"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Facebook
+            <ArrowUpRight size={12} aria-hidden="true" />
+          </a>
         </div>
 
         <div>
