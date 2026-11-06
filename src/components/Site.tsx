@@ -455,7 +455,7 @@ function Home() {
     {
       name: 'Tailoring',
       subtitle: 'A contemporary point of view',
-      image: '/assets/distinct/tailoring-mobile.webp',
+      image: 'https://i.pinimg.com/736x/c8/eb/08/c8eb0819960388760b020a43e76e2d49.jpg',
       href: '/products',
     },
     {
