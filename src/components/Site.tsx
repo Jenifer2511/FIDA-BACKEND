@@ -326,7 +326,9 @@ function Footer() {
           <p className="eyebrow">FIND OUR WORLD</p>
 
           <p className="small">
-            Serving India, Sri Lanka &amp; the UAE
+            INDIA<br />
+            SRILANKA<br />
+            UAE
           </p>
         </div>
       </div>
