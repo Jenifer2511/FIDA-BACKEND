@@ -68,22 +68,6 @@ const FIDA_CATEGORIES = [
 ] as const;
 
 const logoStyles = `
-  .site .header-brand-group {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    flex-shrink: 0;
-  }
-
-  .site .header-brand-name {
-    max-width: 180px;
-    color: inherit;
-    font-size: 9px;
-    font-weight: 600;
-    line-height: 1.5;
-    letter-spacing: .14em;
-  }
-
   .site .header .brand.fida-logo {
     display: inline-flex;
     align-items: center;
@@ -118,16 +102,6 @@ const logoStyles = `
   }
 
   @media (max-width: 760px) {
-    .site .header-brand-group {
-      gap: 8px;
-    }
-
-    .site .header-brand-name {
-      max-width: 125px;
-      font-size: 7px;
-      letter-spacing: .1em;
-    }
-
     .site .header .brand.fida-logo {
       width: 58px;
       height: 58px;
@@ -207,24 +181,19 @@ function Header({ page }: { page: Page }) {
       </a>
 
       <header className={`header ${open ? 'menu-open' : ''}`}>
-        <div className="header-brand-group">
-          <a
-            href="/"
-            className="brand fida-logo"
-            aria-label="FIDA home"
-          >
-            <img
-              src="/assets/brand/fida-logo.png"
-              alt="FIDA"
-              width={72}
-              height={72}
-              decoding="async"
-            />
-          </a>
-          <span className="header-brand-name">
-            FIDA FASHIONS AND LIFESTYLES
-          </span>
-        </div>
+        <a
+          href="/"
+          className="brand fida-logo"
+          aria-label="FIDA home"
+        >
+          <img
+            src="/assets/brand/fida-logo.png"
+            alt="FIDA"
+            width={72}
+            height={72}
+            decoding="async"
+          />
+        </a>
 
         <nav
           aria-label="Main navigation"
