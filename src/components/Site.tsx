@@ -187,7 +187,7 @@ function Header({ page }: { page: Page }) {
           aria-label="FIDA home"
         >
           <img
-            src="https://cdn.builder.io/api/v1/image/assets%2F884d5fc485c54ebe866f566d5dc6bc5a%2Fd58148d638dc416db2176e724d4cda3b?format=webp&width=800&height=1200"
+            src="https://cdn.builder.io/api/v1/image/assets%2F884d5fc485c54ebe866f566d5dc6bc5a%2F09d16b0136d342f688447a7ceddb5fe8?format=webp&width=800&height=1200"
             alt="FIDA"
             width={72}
             height={72}
