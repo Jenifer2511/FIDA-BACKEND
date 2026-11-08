@@ -20,7 +20,7 @@ export const pageThemes={
 };
 export const responsivePhoto=(src:string)=>src.includes('/distinct/lehenga-')?{srcSet:src.replace('-4k.jpg','-mobile.webp')+' 1024w',sizes:'100vw'}:src.endsWith('-4k.jpg')?{srcSet:src.replace('-4k.jpg','-mobile.webp')+' 1600w, '+src+' 3840w',sizes:'(max-width: 760px) 100vw, 3840px'}:{};
 export function FashionBackdrop({page}:{page:SceneKind}){if(page==='home')return null;const t=pageThemes[page];return <div className={'page-scenery scenery-'+page} aria-hidden="true"><img src={t.image} {...responsivePhoto(t.image)} alt=""/><div/></div>}
-const looks = initialProducts.filter(p => p.featured).slice(0, 3).map((p, i) => ({image:p.image,name:p.name,tag:String(i+1).padStart(2,'0')+' / '+p.category.toUpperCase()}));
+const looks = initialProducts.filter(p => p.featured).slice(0, 3).map(p => ({image:p.image,name:p.name,tag:p.category.toUpperCase()}));
 function ExistingCultureChapter({kind}:{kind:SceneKind}) {
  const root=useRef<HTMLElement>(null),stage=useRef<HTMLDivElement>(null),reduce=useReducedMotion();const theme=pageThemes[kind];
  useEffect(()=>{
