@@ -72,12 +72,10 @@ const logoStyles = `
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    width: 72px;
+    width: 128px;
     height: 72px;
-    padding: 5px;
-    background: #fff;
-    border-radius: 6px;
-    overflow: hidden;
+    padding: 0;
+    background: transparent;
   }
 
   .site .header .brand.fida-logo img,
@@ -102,9 +100,9 @@ const logoStyles = `
 
   @media (max-width: 760px) {
     .site .header .brand.fida-logo {
-      width: 58px;
-      height: 58px;
-      padding: 4px;
+      width: 108px;
+      height: 60px;
+      padding: 0;
     }
   }
 `;
