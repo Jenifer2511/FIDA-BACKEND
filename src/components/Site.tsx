@@ -76,7 +76,7 @@ const logoStyles = `
     width: 72px;
     height: 72px;
     padding: 5px;
-    background: #fff;
+    background: transparent;
     border-radius: 6px;
     overflow: hidden;
   }
