@@ -533,7 +533,7 @@ function Home() {
         </div>
 
         <p className="home-films-label">
-          CONSIDERED SHAPES. YOUR OWN EXPRESSION.
+          YOUR OWN EXPRESSION.
         </p>
       </section>
 
