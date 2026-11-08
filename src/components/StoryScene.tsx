@@ -93,7 +93,7 @@ export function StoryScene({images,portrait}:Props){
  return <section className={'makers-sequence '+(fallback?'makers-fallback':'')} id="makers" ref={section} aria-label="A scroll-controlled tribute: 132 photographs gather into a spiral and form a traditional tailor’s portrait">
   <div className="makers-sticky">
    <div className="makers-grain"/>
-   <div className="makers-top"><span>132 PHOTOGRAPHS /<br></br>ONE HUMAN STORY</span><span>{fallback?'A STILL MOMENT':state==='loading'?'GATHERING THE THREADS':'SCROLL TO REVEAL'}</span></div>
+   <div className="makers-top"><span>A CRAFTMAN STORY</span><span>{fallback?'A STILL MOMENT':state==='loading'?'GATHERING THE THREADS':'SCROLL TO REVEAL'}</span></div>
    <div className={'webgl-stage '+(fallback?'is-fallback':'')} ref={host}/>
    {fallback&&<img className="portrait-fallback" src={portrait} alt="A traditional Indian tailor working at a vintage sewing machine"/>}
    {!fallback&&<div className="makers-captions" aria-hidden="true"><div className="makers-caption makers-opening"><p className="eyebrow">LOOK A LITTLE CLOSER</p><h2>Nothing beautiful<br/><em>is made alone.</em></h2></div><div className="makers-caption makers-spiral"><p className="eyebrow">A WORLD OF HUMAN CRAFT</p><h2>A hundred stories.<br/><em>One shared thread.</em></h2></div><div className="makers-caption makers-assembly"><p className="eyebrow">AND EVERY THREAD LEADS BACK TO</p><h2>The hands<br/><em>behind it all.</em></h2></div></div>}
@@ -103,4 +103,3 @@ export function StoryScene({images,portrait}:Props){
   </div>
  </section>;
 }
-

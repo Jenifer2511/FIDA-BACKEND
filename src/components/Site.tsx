@@ -72,12 +72,10 @@ const logoStyles = `
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    width: 72px;
+    width: 128px;
     height: 72px;
-    padding: 5px;
-    background: #fff;
-    border-radius: 6px;
-    overflow: hidden;
+    padding: 0;
+    background: transparent;
   }
 
   .site .header .brand.fida-logo img,
@@ -102,9 +100,9 @@ const logoStyles = `
 
   @media (max-width: 760px) {
     .site .header .brand.fida-logo {
-      width: 58px;
-      height: 58px;
-      padding: 4px;
+      width: 108px;
+      height: 60px;
+      padding: 0;
     }
   }
 `;
@@ -186,7 +184,7 @@ function Header({ page }: { page: Page }) {
           aria-label="FIDA home"
         >
           <img
-            src="/assets/brand/fida-logo.png"
+            src="https://cdn.builder.io/api/v1/image/assets%2F884d5fc485c54ebe866f566d5dc6bc5a%2F42f014ac37bd46d0a3cd5ca1a62d2b8f?format=webp&width=800&height=1200"
             alt="FIDA"
             width={72}
             height={72}
@@ -310,13 +308,22 @@ function Footer() {
             Instagram
             <ArrowUpRight size={12} aria-hidden="true" />
           </a>
+
+          <a
+            href={company.facebook}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Facebook
+            <ArrowUpRight size={12} aria-hidden="true" />
+          </a>
         </div>
 
         <div>
           <p className="eyebrow">FIND OUR WORLD</p>
 
           <p className="small">
-            Serving India, Sri Lanka &amp; the UAE
+            Serving<br />India<br />Sri Lanka<br />UAE
           </p>
         </div>
       </div>
@@ -454,7 +461,8 @@ function Home() {
     {
       name: 'Tailoring',
       subtitle: 'A contemporary point of view',
-      image: '/assets/distinct/tailoring-mobile.webp',
+      image: '/assets/culture/indian-saree-weaving-mobile.webp',
+      imageAlt: 'A woman weaving fabric at a traditional loom',
       href: '/products',
     },
     {
@@ -523,7 +531,7 @@ function Home() {
         </div>
 
         <p className="home-films-label">
-          CONSIDERED SHAPES. YOUR OWN EXPRESSION.
+          YOUR OWN EXPRESSION.
         </p>
       </section>
 
@@ -555,7 +563,7 @@ function Home() {
             >
               <img
                 src={card.image}
-                alt={`${card.name} fashion inspiration`}
+                alt={card.imageAlt || `${card.name} fashion inspiration`}
                 loading="lazy"
               />
 
