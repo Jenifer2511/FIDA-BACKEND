@@ -454,7 +454,8 @@ function Home() {
     {
       name: 'Tailoring',
       subtitle: 'A contemporary point of view',
-      image: '/assets/distinct/tailoring-mobile.webp',
+      image: '/assets/culture/indian-saree-weaving-mobile.webp',
+      imageAlt: 'A woman weaving fabric at a traditional loom',
       href: '/products',
     },
     {
@@ -555,7 +556,7 @@ function Home() {
             >
               <img
                 src={card.image}
-                alt={`${card.name} fashion inspiration`}
+                alt={card.imageAlt || `${card.name} fashion inspiration`}
                 loading="lazy"
               />
 
