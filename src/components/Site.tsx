@@ -73,12 +73,12 @@ const logoStyles = `
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    width: 72px;
-    height: 72px;
-    padding: 5px;
+    width: 170px;
+    height: 92px;
+    padding: 0;
     background: transparent;
-    border-radius: 6px;
-    overflow: hidden;
+    border-radius: 0;
+    overflow: visible;
   }
 
   .site .header .brand.fida-logo img,
@@ -91,7 +91,7 @@ const logoStyles = `
     max-width: 100%;
     object-fit: contain;
     object-position: center;
-    mix-blend-mode: normal;
+    mix-blend-mode: screen;
     filter: none;
     transform: none;
   }
@@ -103,9 +103,9 @@ const logoStyles = `
 
   @media (max-width: 760px) {
     .site .header .brand.fida-logo {
-      width: 58px;
-      height: 58px;
-      padding: 4px;
+      width: 142px;
+      height: 76px;
+      padding: 0;
     }
   }
 `;
